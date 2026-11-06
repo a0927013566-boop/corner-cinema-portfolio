@@ -1,0 +1,371 @@
+[
+  {
+    "id": "track-01",
+    "kind": "audio",
+    "title": "路燈亮起的時候",
+    "version": "",
+    "group": "song",
+    "duration": 166.64,
+    "src": "media/audio/track-01.mp3"
+  },
+  {
+    "id": "track-02",
+    "kind": "audio",
+    "title": "逐光而行",
+    "version": "",
+    "group": "song",
+    "duration": 295.52,
+    "src": "media/audio/track-02.mp3"
+  },
+  {
+    "id": "track-03",
+    "kind": "audio",
+    "title": "光的另一面",
+    "version": "版本 2",
+    "group": "song",
+    "duration": 272.36,
+    "src": "media/audio/track-03.mp3"
+  },
+  {
+    "id": "track-04",
+    "kind": "audio",
+    "title": "歲月之外",
+    "version": "發行版",
+    "group": "song",
+    "duration": 257.0,
+    "src": "media/audio/track-04.mp3"
+  },
+  {
+    "id": "track-05",
+    "kind": "audio",
+    "title": "歲月之外",
+    "version": "",
+    "group": "song",
+    "duration": 271.92,
+    "src": "media/audio/track-05.mp3"
+  },
+  {
+    "id": "track-06",
+    "kind": "audio",
+    "title": "我們把年少寫在同一頁",
+    "version": "",
+    "group": "song",
+    "duration": 236.8,
+    "src": "media/audio/track-06.mp3"
+  },
+  {
+    "id": "track-07",
+    "kind": "audio",
+    "title": "越過長夜",
+    "version": "",
+    "group": "song",
+    "duration": 183.891854,
+    "src": "media/audio/track-07.mp3"
+  },
+  {
+    "id": "track-08",
+    "kind": "audio",
+    "title": "Under the Lamp",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 153.6,
+    "src": "media/audio/track-08.mp3"
+  },
+  {
+    "id": "track-09",
+    "kind": "audio",
+    "title": "The Light That Stays",
+    "version": "",
+    "group": "score",
+    "duration": 194.4,
+    "src": "media/audio/track-09.mp3"
+  },
+  {
+    "id": "track-10",
+    "kind": "audio",
+    "title": "Weekend Lane",
+    "version": "",
+    "group": "score",
+    "duration": 106.4,
+    "src": "media/audio/track-10.mp3"
+  },
+  {
+    "id": "track-11",
+    "kind": "audio",
+    "title": "Under the Lamp",
+    "version": "",
+    "group": "score",
+    "duration": 39.12,
+    "src": "media/audio/track-11.mp3"
+  },
+  {
+    "id": "track-12",
+    "kind": "audio",
+    "title": "Morning Classroom",
+    "version": "",
+    "group": "score",
+    "duration": 159.96,
+    "src": "media/audio/track-12.mp3"
+  },
+  {
+    "id": "track-13",
+    "kind": "audio",
+    "title": "老地方的晚餐",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 133.88,
+    "src": "media/audio/track-13.mp3"
+  },
+  {
+    "id": "track-14",
+    "kind": "audio",
+    "title": "晨練與紀律",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 151.44,
+    "src": "media/audio/track-14.mp3"
+  },
+  {
+    "id": "track-15",
+    "kind": "audio",
+    "title": "晨練與紀律",
+    "version": "",
+    "group": "score",
+    "duration": 188.36,
+    "src": "media/audio/track-15.mp3"
+  },
+  {
+    "id": "track-16",
+    "kind": "audio",
+    "title": "老地方的晚餐",
+    "version": "版本 2・另一演繹",
+    "group": "score",
+    "duration": 131.2,
+    "src": "media/audio/track-16.mp3"
+  },
+  {
+    "id": "track-18",
+    "kind": "audio",
+    "title": "還沒說出口",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 28.0,
+    "src": "media/audio/track-18.mp3"
+  },
+  {
+    "id": "track-19",
+    "kind": "audio",
+    "title": "還沒說出口",
+    "version": "",
+    "group": "score",
+    "duration": 188.0,
+    "src": "media/audio/track-19.mp3"
+  },
+  {
+    "id": "track-20",
+    "kind": "audio",
+    "title": "歲月很長",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 208.6,
+    "src": "media/audio/track-20.mp3"
+  },
+  {
+    "id": "track-21",
+    "kind": "audio",
+    "title": "歲月很長",
+    "version": "",
+    "group": "score",
+    "duration": 185.0,
+    "src": "media/audio/track-21.mp3"
+  },
+  {
+    "id": "track-22",
+    "kind": "audio",
+    "title": "倒數",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 94.0,
+    "src": "media/audio/track-22.mp3"
+  },
+  {
+    "id": "track-23",
+    "kind": "audio",
+    "title": "倒數",
+    "version": "",
+    "group": "score",
+    "duration": 108.4,
+    "src": "media/audio/track-23.mp3"
+  },
+  {
+    "id": "track-24",
+    "kind": "audio",
+    "title": "不必出手",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 213.6,
+    "src": "media/audio/track-24.mp3"
+  },
+  {
+    "id": "track-25",
+    "kind": "audio",
+    "title": "不必出手",
+    "version": "",
+    "group": "score",
+    "duration": 197.2,
+    "src": "media/audio/track-25.mp3"
+  },
+  {
+    "id": "track-26",
+    "kind": "audio",
+    "title": "打得越重",
+    "version": "版本 3",
+    "group": "score",
+    "duration": 147.6,
+    "src": "media/audio/track-26.mp3"
+  },
+  {
+    "id": "track-28",
+    "kind": "audio",
+    "title": "打得越重",
+    "version": "",
+    "group": "score",
+    "duration": 172.8,
+    "src": "media/audio/track-28.mp3"
+  },
+  {
+    "id": "track-29",
+    "kind": "audio",
+    "title": "現代校園日常",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 111.76,
+    "src": "media/audio/track-29.mp3"
+  },
+  {
+    "id": "track-30",
+    "kind": "audio",
+    "title": "現代校園日常",
+    "version": "",
+    "group": "score",
+    "duration": 127.2,
+    "src": "media/audio/track-30.mp3"
+  },
+  {
+    "id": "track-31",
+    "kind": "audio",
+    "title": "日常中的細微異常",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 118.2,
+    "src": "media/audio/track-31.mp3"
+  },
+  {
+    "id": "track-32",
+    "kind": "audio",
+    "title": "日常中的細微異常",
+    "version": "",
+    "group": "score",
+    "duration": 119.16,
+    "src": "media/audio/track-32.mp3"
+  },
+  {
+    "id": "track-33",
+    "kind": "audio",
+    "title": "不可思議的一瞬間",
+    "version": "",
+    "group": "score",
+    "duration": 178.0,
+    "src": "media/audio/track-33.mp3"
+  },
+  {
+    "id": "track-34",
+    "kind": "audio",
+    "title": "精密思考與未知探索",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 148.0,
+    "src": "media/audio/track-34.mp3"
+  },
+  {
+    "id": "track-36",
+    "kind": "audio",
+    "title": "精密思考與未知探索",
+    "version": "",
+    "group": "score",
+    "duration": 128.24,
+    "src": "media/audio/track-36.mp3"
+  },
+  {
+    "id": "track-37",
+    "kind": "audio",
+    "title": "未解的情緒與懸念收尾",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 148.84,
+    "src": "media/audio/track-37.mp3"
+  },
+  {
+    "id": "track-38",
+    "kind": "audio",
+    "title": "未解的情緒與懸念收尾",
+    "version": "",
+    "group": "score",
+    "duration": 164.24,
+    "src": "media/audio/track-38.mp3"
+  },
+  {
+    "id": "track-39",
+    "kind": "audio",
+    "title": "優雅而強大的動作場景",
+    "version": "版本 4",
+    "group": "score",
+    "duration": 158.4,
+    "src": "media/audio/track-39.mp3"
+  },
+  {
+    "id": "track-40",
+    "kind": "audio",
+    "title": "優雅而強大的動作場景",
+    "version": "版本 3",
+    "group": "score",
+    "duration": 157.2,
+    "src": "media/audio/track-40.mp3"
+  },
+  {
+    "id": "track-41",
+    "kind": "audio",
+    "title": "顧明曦｜理性與少女心",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 188.0,
+    "src": "media/audio/track-41.mp3"
+  },
+  {
+    "id": "track-42",
+    "kind": "audio",
+    "title": "顧明曦｜理性與少女心",
+    "version": "",
+    "group": "score",
+    "duration": 201.52,
+    "src": "media/audio/track-42.mp3"
+  },
+  {
+    "id": "track-43",
+    "kind": "audio",
+    "title": "沈夜｜現代東方主題",
+    "version": "版本 2",
+    "group": "score",
+    "duration": 188.36,
+    "src": "media/audio/track-43.mp3"
+  },
+  {
+    "id": "track-44",
+    "kind": "audio",
+    "title": "沈夜｜現代東方主題",
+    "version": "",
+    "group": "score",
+    "duration": 184.8,
+    "src": "media/audio/track-44.mp3"
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "changye",
+    "title": "長夜同行",
+    "subtitle": "原創 AI 短劇・第 1 集上／下",
+    "category": "series",
+    "label": "故事影集",
+    "poster": "assets/series-changye.jpg",
+    "description": "跟著角色走進故事，從第一集開始觀看。人物與情節為虛構，使用 AI 輔助製作。",
+    "episodes": [
+      {
+        "title": "《長夜同行》第1集（上）｜原創 AI 短劇",
+        "youtubeId": "Jh_2Yh8Jay8",
+        "duration": "PT1M1S"
+      },
+      {
+        "title": "《長夜同行》第1集（下）｜原創 AI 短劇",
+        "youtubeId": "nFohx8ILt2Y",
+        "duration": "PT1M1S"
+      }
+    ]
+  },
+  {
+    "id": "qiuguang",
+    "title": "囚光",
+    "subtitle": "原創 AI 影像・17 集",
+    "category": "series",
+    "label": "故事影集",
+    "poster": "assets/series-qiuguang.jpg",
+    "description": "十七段影像，串起《囚光》的故事。依序選集，繼續觀看。AI 輔助製作。",
+    "episodes": [
+      {
+        "title": "AI:囚光",
+        "youtubeId": "sfePizzLbcM",
+        "duration": "PT1M3S"
+      },
+      {
+        "title": "囚光2",
+        "youtubeId": "ZAQQAX501SY",
+        "duration": "PT1M13S"
+      },
+      {
+        "title": "囚光3",
+        "youtubeId": "RMZP-zksVFs",
+        "duration": "PT1M1S"
+      },
+      {
+        "title": "囚光4",
+        "youtubeId": "huIAB9aoLYI",
+        "duration": "PT1M6S"
+      },
+      {
+        "title": "囚光5",
+        "youtubeId": "7XWq5nO9Ilc",
+        "duration": "PT1M12S"
+      },
+      {
+        "title": "囚光6",
+        "youtubeId": "LEcC8Zt_BSU",
+        "duration": "PT1M2S"
+      },
+      {
+        "title": "囚光7",
+        "youtubeId": "yMMOq6pv4oQ",
+        "duration": "PT1M5S"
+      },
+      {
+        "title": "囚光8",
+        "youtubeId": "iC4eNM8DJ90",
+        "duration": "PT1M5S"
+      },
+      {
+        "title": "囚光9",
+        "youtubeId": "-jS7uRrwDbI",
+        "duration": "PT1M10S"
+      },
+      {
+        "title": "囚光10",
+        "youtubeId": "-4GQoPa7pfY",
+        "duration": "PT54S"
+      },
+      {
+        "title": "囚光11",
+        "youtubeId": "x7ebnV4MUrY",
+        "duration": "PT1M4S"
+      },
+      {
+        "title": "囚光12",
+        "youtubeId": "hpszCoEvIJ8",
+        "duration": "PT1M13S"
+      },
+      {
+        "title": "囚光13",
+        "youtubeId": "YpL22eR-yhg",
+        "duration": "PT1M7S"
+      },
+      {
+        "title": "囚光14",
+        "youtubeId": "3lhUaDwfXLY",
+        "duration": "PT1M23S"
+      },
+      {
+        "title": "囚光15",
+        "youtubeId": "K9rVH_HWHZo",
+        "duration": "PT1M17S"
+      },
+      {
+        "title": "囚光16",
+        "youtubeId": "0h87q7mkYzs",
+        "duration": "PT1M53S"
+      },
+      {
+        "title": "囚光17",
+        "youtubeId": "iVBZpIGpQ0U",
+        "duration": "PT1M37S"
+      }
+    ]
+  },
+  {
+    "id": "longnight",
+    "title": "越過長夜",
+    "subtitle": "中英字幕・03:04",
+    "duration": "03:04",
+    "category": "mv",
+    "label": "音樂 MV",
+    "poster": "assets/longnight.jpg",
+    "src": "media/longnight-web.mp4",
+    "description": "以原創歌曲與 AI 影像，走過夜色中的一段旅程。中英字幕完整版。"
+  },
+  {
+    "id": "streetlight",
+    "title": "路燈亮起的時候",
+    "subtitle": "中英字幕・02:47",
+    "duration": "02:47",
+    "category": "mv",
+    "label": "音樂 MV",
+    "poster": "assets/streetlight.jpg",
+    "src": "media/streetlight-web.mp4",
+    "youtubeId": "XOOsCvNIOyA",
+    "description": "把記憶寫進歌裡，讓一盞路燈照亮故事。AI 圖像與 Suno 音樂，中英字幕完整版。"
+  },
+  {
+    "id": "community-white",
+    "title": "阿公阿嬤的手機課",
+    "subtitle": "乾淨白框・01:14",
+    "duration": "01:14",
+    "category": "photo",
+    "label": "照片敘事",
+    "poster": "assets/community-white.jpg",
+    "src": "media/community-white-web.mp4",
+    "description": "十四張照片，配上 Morning Classroom，以乾淨白框記錄一堂手機課的片刻。",
+    "disclosure": "AI 生成的虛構活動示範，並非真實客戶案例。"
+  },
+  {
+    "id": "community-paper",
+    "title": "阿公阿嬤的手機課",
+    "subtitle": "剪貼紙底・01:08",
+    "duration": "01:08",
+    "category": "photo",
+    "label": "照片敘事",
+    "poster": "assets/community-paper.jpg",
+    "src": "media/community-paper-web.mp4",
+    "description": "同一組照片，換成剪貼紙底與 Weekend Lane 配樂，呈現另一種回顧的節奏。",
+    "disclosure": "AI 生成的虛構活動示範，並非真實客戶案例。"
+  },
+  {
+    "id": "wedding",
+    "title": "阿哲 ＆ 小芸",
+    "subtitle": "電影暗場・01:49",
+    "duration": "01:49",
+    "category": "photo",
+    "label": "照片敘事",
+    "poster": "assets/wedding.jpg",
+    "src": "media/wedding-web.mp4",
+    "description": "從求婚到婚禮當晚，以十六張照片與 Under the Lamp 配樂，編排一段婚禮回顧。",
+    "disclosure": "人物、人名與日期均為 AI 虛構示範，並非真實婚禮或客戶案例。"
+  }
+]

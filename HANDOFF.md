@@ -24,12 +24,16 @@
 
 ## 2026-11-07 狀態
 
-- 網站來源已上傳至本人公開倉庫 [corner-cinema-portfolio](https://github.com/a0927013566-boop/corner-cinema-portfolio)。GitHub Pages 尚待啟用；網站來源可移至其他靜態服務。
+- 網站來源已上傳至本人公開倉庫 [corner-cinema-portfolio](https://github.com/a0927013566-boop/corner-cinema-portfolio)。本人完成 Pages 設定後，正式網站已啟用；網站來源可移至其他靜態服務。
 - Chromium 桌面 1440px、行動視窗 390px 已檢查畫面、水平溢位與頁內錨點；這不是實體手機測試。
 - 已讀回本人倉庫的協作者，當時僅有倉庫擁有者；後續修改權依 GitHub 實際權限與授權為準。
 
-## 公開預覽與正式部署
+## 正式部署與接續
 
-可供瀏覽的暫時版本：[作品集預覽](https://rawcdn.githack.com/a0927013566-boop/corner-cinema-portfolio/d6c1b675eab4c8367e614e508980776fe30d2099/index.html)。此連結固定在提交 `d6c1b675eab4c8367e614e508980776fe30d2099`；之後改 main 不會自動更新這個網址。這是第三方快取服務，不應當成可持續維護的正式部署。已用 HTTP 讀回 HTML、CSS、JavaScript 各自為 200，未在外部真機完整測試。
+正式網址：[角落電影院作品集](https://a0927013566-boop.github.io/corner-cinema-portfolio/)。使用 GitHub Pages，由本倉庫 `main` 分支根目錄自動發布。舊的第三方固定版本預覽不再作為使用入口。
 
-正式網站應以 GitHub Pages 綁定 main：目前推送倉庫正常，但當前 GitHub integration 呼叫 Pages 設定 API 回應 403。不得宣稱 GitHub Pages 已啟用。兩支影片的 Drive 權限目前為私人，分享變更待本人同意；不得因預覽網址而聲稱已可播放。
+2026-11-07（台北時間）已確認倉庫 `has_pages=true`，首次 [pages build and deployment](https://github.com/a0927013566-boop/corner-cinema-portfolio/actions/runs/42302342194) 成功，發布提交 `ea86f492d2746e5a9c61900c88106dbc458b8f8d`。匿名 HTTPS 取得首頁、CSS 與 JavaScript 均為 200，檔案雜湊與該提交原始碼一致。正式站的真手機與影片播放未驗證。
+
+後續 AI 修改本倉庫，經驗證及 PR 合併到 `main` 後，確認部署成功並讀回正式網址。私人主倉的快照不會自動同步，不以舊快照覆蓋本倉庫。訪客沒有編輯入口，只有具備倉庫寫入權限且獲本人授權的帳號／AI 可以發布變更。
+
+兩支 MV 的 Drive 權限目前為私人，分享變更待本人同意；公開網站上線不代表這兩支影片已可播放。網站發布階段已完成，完整作品播放仍待接入。

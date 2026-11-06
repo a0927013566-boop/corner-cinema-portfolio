@@ -1,0 +1,47 @@
+{
+  "captured": "2026-11-07 Asia/Taipei",
+  "files": [
+    {
+      "path": "docs/evidence/desktop-entry.jpg",
+      "bytes": 124814,
+      "sha256": "836cb83918e0a1454beee7a650624b5d763722eee8bfc2a5888efa2ef66bf6fc",
+      "source": "Local Chromium capture of the authorized public portfolio",
+      "purpose": "UI verification, not an additional portfolio work"
+    },
+    {
+      "path": "docs/evidence/desktop-films.jpg",
+      "bytes": 158450,
+      "sha256": "a62ca43617dbe70fa0bb51b5d09341a53736ce875b3d2040107f5219223a930d",
+      "source": "Local Chromium capture of the authorized public portfolio",
+      "purpose": "UI verification, not an additional portfolio work"
+    },
+    {
+      "path": "docs/evidence/desktop-photo.jpg",
+      "bytes": 145746,
+      "sha256": "ba6289ed0cd3ce209e655bfbd69ce8bef8e4e1031f861536aa471f7d67e47535",
+      "source": "Local Chromium capture of the authorized public portfolio",
+      "purpose": "UI verification, not an additional portfolio work"
+    },
+    {
+      "path": "docs/evidence/interaction-demo.webm",
+      "bytes": 518973,
+      "sha256": "bafa0b800b0a67fd742087addedeaf8435efe37c1f9abf2c9f481b97fb0702a7",
+      "source": "Local Chromium capture of the authorized public portfolio",
+      "purpose": "UI verification, not an additional portfolio work"
+    },
+    {
+      "path": "docs/evidence/mobile-entry.jpg",
+      "bytes": 57119,
+      "sha256": "4446269faac9a87ade23e6903e4b2bd8acdd02617cdee4dae2dcfe76ddef4742",
+      "source": "Local Chromium capture of the authorized public portfolio",
+      "purpose": "UI verification, not an additional portfolio work"
+    },
+    {
+      "path": "docs/evidence/mobile-listening.jpg",
+      "bytes": 43292,
+      "sha256": "e05a68873b27ffb8507ed655384c9b321e031571e0cf001005b6667dd95451ad",
+      "source": "Local Chromium capture of the authorized public portfolio",
+      "purpose": "UI verification, not an additional portfolio work"
+    }
+  ]
+}

@@ -27,3 +27,9 @@
 - 網站來源已上傳至本人公開倉庫 [corner-cinema-portfolio](https://github.com/a0927013566-boop/corner-cinema-portfolio)。GitHub Pages 尚待啟用；網站來源可移至其他靜態服務。
 - Chromium 桌面 1440px、行動視窗 390px 已檢查畫面、水平溢位與頁內錨點；這不是實體手機測試。
 - 已讀回本人倉庫的協作者，當時僅有倉庫擁有者；後續修改權依 GitHub 實際權限與授權為準。
+
+## 公開預覽與正式部署
+
+可供瀏覽的暫時版本：[作品集預覽](https://rawcdn.githack.com/a0927013566-boop/corner-cinema-portfolio/d6c1b675eab4c8367e614e508980776fe30d2099/index.html)。此連結固定在提交 `d6c1b675eab4c8367e614e508980776fe30d2099`；之後改 main 不會自動更新這個網址。這是第三方快取服務，不應當成可持續維護的正式部署。已用 HTTP 讀回 HTML、CSS、JavaScript 各自為 200，未在外部真機完整測試。
+
+正式網站應以 GitHub Pages 綁定 main：目前推送倉庫正常，但當前 GitHub integration 呼叫 Pages 設定 API 回應 403。不得宣稱 GitHub Pages 已啟用。兩支影片的 Drive 權限目前為私人，分享變更待本人同意；不得因預覽網址而聲稱已可播放。

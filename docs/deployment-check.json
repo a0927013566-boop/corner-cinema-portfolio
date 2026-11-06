@@ -1,0 +1,205 @@
+{
+  "commit": "a80eaa0344d22c8427d91c74988530693e4ad1e3",
+  "deploymentRun": 42313223138,
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 20975,
+      "sha256": "54044de61391806dd9138ba20f11969b1d5094973f02ab7b9bb1f8d17fb6165c"
+    },
+    {
+      "path": "catalog.html",
+      "status": 200,
+      "bytes": 5738,
+      "sha256": "74fb3c6953ccd8c7a7fd3d0fc0b617278fe06c33b030adc590d1691e3ae2109e"
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "bytes": 28057,
+      "sha256": "4ee15ce500a91280290d00b24067ccb55846ddf342c62998cb184451070bfe99"
+    },
+    {
+      "path": "script.js",
+      "status": 200,
+      "bytes": 12668,
+      "sha256": "5c29fd1536f36ba2da3d09edd30a06eb608cc3e7c7db92ed9642c5dc09fdab57"
+    },
+    {
+      "path": "lib/catalog.mjs",
+      "status": 200,
+      "bytes": 3737,
+      "sha256": "e77c82fa417c3baf850a10cb0a8086f97e4197fe670103e632417ce2548fcc80"
+    },
+    {
+      "path": "lib/listening.js",
+      "status": 200,
+      "bytes": 4388,
+      "sha256": "ea7749d26c3d058a6b4078a064ea61f5c8c164fe82aa73cd15c1f6cfae719b92"
+    },
+    {
+      "path": "data/works.json",
+      "status": 200,
+      "bytes": 5144,
+      "sha256": "60d04d37a59b85a5d3b87b0cdd9340cc23748db1ad1698580c52643e62472bc9"
+    },
+    {
+      "path": "data/music.json",
+      "status": 200,
+      "bytes": 7960,
+      "sha256": "26e26282122b1282dd82396ad4f922b125681e2f47c5523a7010ac9f3f35f0d9"
+    },
+    {
+      "path": "data/youtube.json",
+      "status": 200,
+      "bytes": 4598,
+      "sha256": "6d30945f9e400535bb4e5bdd868a8fbf4f9b405026a5f7a729ed5a5a0bf9f7cd"
+    },
+    {
+      "path": "data/media-manifest.json",
+      "status": 200,
+      "bytes": 9815,
+      "sha256": "cf21f7187a6eed953be1b01358467dad5b1157589a68a193eeb44c7151885c42"
+    },
+    {
+      "path": "favicon.svg",
+      "status": 200,
+      "bytes": 213,
+      "sha256": "703f5c1572ecebfe01079ce51bfd1f8d62695030db175e5964a48d35f77bb5cd"
+    },
+    {
+      "path": "docs/design-plan.md",
+      "status": 200,
+      "bytes": 3298,
+      "sha256": "1c561b9b92181b2e2afa8805e7b8e914f2f8f9f1dd403f42272cad2e3a158574"
+    },
+    {
+      "path": "docs/validation.md",
+      "status": 200,
+      "bytes": 3334,
+      "sha256": "6e496a0db217b63b6bd7b8ad23f86c7ff6c0d48c8c5eb2c4bd4cd08ecff85f75"
+    },
+    {
+      "path": "docs/evidence/manifest.json",
+      "status": 200,
+      "bytes": 1954,
+      "sha256": "7189ba643211bec68c743e19114a8a87b635916af5358ce8662a9ff5087679fb"
+    },
+    {
+      "path": "docs/evidence/mobile-listening.jpg",
+      "status": 200,
+      "bytes": 43292,
+      "sha256": "e05a68873b27ffb8507ed655384c9b321e031571e0cf001005b6667dd95451ad"
+    },
+    {
+      "path": "docs/evidence/desktop-photo.jpg",
+      "status": 200,
+      "bytes": 145746,
+      "sha256": "ba6289ed0cd3ce209e655bfbd69ce8bef8e4e1031f861536aa471f7d67e47535"
+    },
+    {
+      "path": "docs/evidence/interaction-demo.webm",
+      "status": 200,
+      "bytes": 518973,
+      "sha256": "bafa0b800b0a67fd742087addedeaf8435efe37c1f9abf2c9f481b97fb0702a7"
+    },
+    {
+      "path": "docs/evidence/desktop-entry.jpg",
+      "status": 200,
+      "bytes": 124814,
+      "sha256": "836cb83918e0a1454beee7a650624b5d763722eee8bfc2a5888efa2ef66bf6fc"
+    },
+    {
+      "path": "docs/evidence/desktop-films.jpg",
+      "status": 200,
+      "bytes": 158450,
+      "sha256": "a62ca43617dbe70fa0bb51b5d09341a53736ce875b3d2040107f5219223a930d"
+    },
+    {
+      "path": "docs/evidence/README.md",
+      "status": 200,
+      "bytes": 799,
+      "sha256": "9b59df5b95d34b70dee6f73921d435591f11a0029d46351b7f0e28a227db5e78"
+    },
+    {
+      "path": "docs/evidence/mobile-entry.jpg",
+      "status": 200,
+      "bytes": 57119,
+      "sha256": "4446269faac9a87ade23e6903e4b2bd8acdd02617cdee4dae2dcfe76ddef4742"
+    }
+  ],
+  "ranges": [
+    {
+      "path": "media/longnight-web.mp4",
+      "status": 206,
+      "contentRange": "bytes 100000-101023/32986813",
+      "bytesRead": 1024
+    },
+    {
+      "path": "media/audio/track-01.mp3",
+      "status": 206,
+      "contentRange": "bytes 100000-101023/4001045",
+      "bytesRead": 1024
+    }
+  ],
+  "verifiedAtUTC": "2026-11-06T23:42:50.867819+00:00",
+  "browserTransport": "Chromium requests fulfilled through TLS-verified APIRequestContext; certificate checking remained enabled",
+  "browser": {
+    "base": "https://a0927013566-boop.github.io/corner-cinema-portfolio/",
+    "errors": [],
+    "cards": 7,
+    "widths": {
+      "320": 320,
+      "390": 390,
+      "1440": 1440
+    },
+    "videoPlay": {
+      "time": 0.234879,
+      "duration": 183.866667,
+      "paused": false
+    },
+    "videoSeek": 120.007739,
+    "audioPlay": {
+      "time": 0.205796,
+      "duration": 166.64,
+      "paused": false
+    },
+    "queuePreserved": "清單 1 / 7",
+    "liveQueueAdvanced": true,
+    "youtube": [
+      {
+        "id": "qiuguang",
+        "title": "AI:囚光 - YouTube",
+        "video": true,
+        "time": 0,
+        "duration": 62,
+        "paused": false,
+        "ready": 0,
+        "largePlay": false,
+        "notice": "",
+        "fallback": "https://www.youtube.com/watch?v=sfePizzLbcM"
+      },
+      {
+        "id": "changye",
+        "title": "《長夜同行》第1集（上）｜原創 AI 短劇 - YouTube",
+        "video": true,
+        "time": 0,
+        "duration": 60,
+        "paused": false,
+        "ready": 0,
+        "largePlay": false,
+        "notice": "",
+        "fallback": "https://www.youtube.com/watch?v=Jh_2Yh8Jay8"
+      }
+    ]
+  },
+  "providerFailures": {
+    "observation": "googlevideo.com media responses returned HTTP 403 in this cloud test; actual YouTube stream playback unverified",
+    "alsoObserved403": [
+      "www.youtube.com",
+      "i.ytimg.com"
+    ]
+  },
+  "scope": "Files describe tested commit a80eaa0 before this report was added; docs may change in later documentation commits. Native sample playback verified; not all media watched/listened in full."
+}

@@ -1765,10 +1765,10 @@ em,i {
 }
 
 @media(prefers-reduced-motion:reduce) {
-  html {
+  html:not([data-motion=running]) {
     scroll-behavior:auto;
   }
-  *,*::before,*::after {
+  html:not([data-motion=running]) *,html:not([data-motion=running]) *::before,html:not([data-motion=running]) *::after {
     animation:none!important;
     transition:none!important;
   }

@@ -1,5 +1,7 @@
 import {external, workMarkup, trackMarkup, episodeDuration} from './lib/catalog.mjs';
 import {createListeningPlayer} from './lib/listening.js';
+import {initSoundExperience, setSoundTrack} from './lib/sound-experience.js';
+initSoundExperience();
 (() => {
   const $ = (selector) => document.querySelector(selector);
   const dialog = $('#player-dialog');
@@ -12,6 +14,7 @@ import {createListeningPlayer} from './lib/listening.js';
       if (location.hash.startsWith('#watch=') && !tracks.some(t => location.hash === `#watch=${t.id}`)) history.replaceState(null, '', '#music');
     },
     onChange(item) {
+      setSoundTrack(item);
       document.querySelectorAll('.track').forEach(link => {
         if (link.dataset.play === item?.id) link.setAttribute('aria-current', 'true');
         else link.removeAttribute('aria-current');

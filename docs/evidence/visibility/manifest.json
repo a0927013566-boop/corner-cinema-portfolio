@@ -42,6 +42,11 @@
       "sha256": "fe856106198acea6d8b08a979c14b4acbd6c3fbea0fb8b40c841309d459c5336"
     },
     {
+      "path": "docs/evidence/visibility/public-check.json",
+      "bytes": 4795,
+      "sha256": "6064434eff7b71c8e7a4fe6f1ab967a45aa1d617d4de6bb063c160e0bb3f8f3a"
+    },
+    {
       "path": "docs/evidence/visibility/smoke.txt",
       "bytes": 428,
       "sha256": "642948df463151783d893e06145afca308ee5cba2a782d916bc2ac4d0ef2aa45"

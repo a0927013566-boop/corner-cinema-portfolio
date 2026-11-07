@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-07",
+  "baseline": "39587b11d7c18f6b267523e92109b14cc49e90da",
+  "recording": {
+    "file": "gallery-interaction.webm",
+    "durationSeconds": 40.08,
+    "speed": 1,
+    "audio": false,
+    "method": "Playwright actual browser recording; no composited animation"
+  },
+  "comparison": "works-before/after: same 1440×1000 viewport, works top; before index.html and script.js from baseline; unchanged resources shared",
+  "acceptance": "new revision not yet reviewed by user; 88a2d94 rejected",
+  "files": [
+    {
+      "path": "docs/evidence/visibility/checks.txt",
+      "bytes": 550,
+      "sha256": "cf922e8107e007bb911eeb62aaac2fe836b73811ee8e81549f38be2d301b404e"
+    },
+    {
+      "path": "docs/evidence/visibility/final-desktop.png",
+      "bytes": 569391,
+      "sha256": "41e19dd87bd130f81ad38d9e82a1069e8c5bd06ab0336df635df37ae9fe3ff45"
+    },
+    {
+      "path": "docs/evidence/visibility/final-fallback.png",
+      "bytes": 684666,
+      "sha256": "42de9157cda577030dc563f2f6adaf31210e8acec1c9c0903180b2bbf580ed48"
+    },
+    {
+      "path": "docs/evidence/visibility/final-mobile.png",
+      "bytes": 158581,
+      "sha256": "0bef88ec81e76f5b389ae0fcde7a031b92b25211a24b8027f28bfce3b9ea66b2"
+    },
+    {
+      "path": "docs/evidence/visibility/gallery-interaction.webm",
+      "bytes": 4714094,
+      "sha256": "54b4a3b19d5d94581c7bfcc4e86fa93a0c4b0862b43e9f81cae4e2bcb07a1515"
+    },
+    {
+      "path": "docs/evidence/visibility/page-overview.png",
+      "bytes": 751500,
+      "sha256": "fe856106198acea6d8b08a979c14b4acbd6c3fbea0fb8b40c841309d459c5336"
+    },
+    {
+      "path": "docs/evidence/visibility/smoke.txt",
+      "bytes": 428,
+      "sha256": "642948df463151783d893e06145afca308ee5cba2a782d916bc2ac4d0ef2aa45"
+    },
+    {
+      "path": "docs/evidence/visibility/spatial.txt",
+      "bytes": 97,
+      "sha256": "8c9210d47ee8d88e2fcbe3d265ee71c416273ee35ca2d7f1e38e6b55cd8a1869"
+    },
+    {
+      "path": "docs/evidence/visibility/works-after.png",
+      "bytes": 615169,
+      "sha256": "0efe8bbeff47c7cf5fb0960d0d9c938bbe5348e5eba7b08d345cff98d969d425"
+    },
+    {
+      "path": "docs/evidence/visibility/works-before.png",
+      "bytes": 513635,
+      "sha256": "2031adc214afece3b490508224686f4cfb3939863996f4612e8305616fa504e5"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+/* A navigable screening room; the complete catalogue remains immediately below. */
+.film-gallery{scroll-margin-top:95px;--film-cream:#eee9dc;position:relative;background:#121a17;color:var(--film-cream);margin:38px 0 48px;border:1px solid #4d5749;overflow:hidden;isolation:isolate}
+.film-gallery[hidden]{display:none}
+.film-gallery::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 30%,#57644a66,transparent 55%);pointer-events:none}
+.film-topline{display:flex;align-items:center;justify-content:space-between;padding:25px 30px 0;gap:18px}
+.film-topline p{font-size:11px;letter-spacing:.2em;margin:0;color:#c8c7b6}
+.film-topline button{color:var(--film-cream);background:transparent;border:1px solid #707968;min-height:44px;padding:8px 14px;font-size:12px}
+.film-space{height:470px;position:relative;touch-action:pan-y;cursor:grab;outline-offset:-4px;overflow:hidden}
+.film-space[data-dragging=true]{cursor:grabbing}
+.film-space canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.film-fallback{position:absolute;inset:0;perspective:900px;perspective-origin:50% 40%;pointer-events:none}
+.film-panel{display:block;position:absolute;left:25%;top:17%;width:50%;aspect-ratio:16/9;border:4px solid #566052;padding:0;background:#161d18;box-shadow:0 25px 30px #0009,6px 3px 0 #89917d;transform:translateX(var(--x,0%)) translateZ(var(--z,0px)) rotateY(var(--yaw,0deg));transform-style:preserve-3d}
+.film-panel img{width:100%;height:100%;object-fit:cover;display:block;user-select:none}
+.film-gallery[data-renderer=webgl] .film-fallback{visibility:hidden}
+.film-gallery[data-renderer=css] canvas{visibility:hidden}
+.film-hint{text-align:center;font-size:12px;color:#c3c9bb;letter-spacing:.08em;margin:-12px 0 0;position:relative;pointer-events:none}
+.film-hint span{display:inline-block;width:22px;margin-right:5px;color:#dfc799}
+.film-info{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:27px 34px 30px}
+.film-meta{font-size:11px;letter-spacing:.1em;color:#bac4b4;margin:0 0 8px}
+.film-title{font:clamp(27px,3vw,42px)/1.35 var(--serif);margin:0;font-weight:400}
+.film-play{display:flex;align-items:center;gap:16px;font-size:14px;white-space:nowrap}
+.film-play span{display:grid;place-items:center;border:1px solid #d4c29a;border-radius:50%;width:54px;height:54px;color:#e0c494;transition:background .3s,color .3s}
+.film-play:hover span{background:#dfc799;color:#131914}
+.film-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #475041;padding:0 25px;gap:20px}
+.film-index{display:flex;gap:24px;overflow-x:auto;scrollbar-width:thin;padding:0 4px}
+.film-index button{position:relative;flex:none;min-height:62px;background:transparent;color:#b6beaf;border:0;padding:10px 0;font-size:12px}
+.film-index button[aria-pressed=true]{color:#f1e9d9}
+.film-index button[aria-pressed=true]::after{content:"";height:2px;position:absolute;bottom:0;left:0;right:0;background:#dcc496}
+.film-navigation{display:flex;align-items:center;flex:none;gap:10px}
+.film-navigation button{width:44px;height:44px;border:1px solid #707968;border-radius:50%;background:transparent;color:#f0eadb;font-size:20px}
+.film-navigation button:hover{background:#3c4738}
+.film-count{font-size:11px;letter-spacing:.08em;color:#d1d5c8;min-width:48px;text-align:center;font-variant-numeric:tabular-nums}
+@media(max-width:900px){.film-space{height:365px}.film-bottom{display:block;padding:0 22px}.film-index{gap:20px}.film-navigation{justify-content:center;padding:14px 0}.film-index button{min-height:54px}}
+@media(max-width:600px){.film-gallery{margin:28px -8px 32px}.film-topline{padding:18px 16px 0}.film-topline p{font-size:9px;letter-spacing:.12em}.film-topline button{padding:6px 9px;font-size:11px}.film-space{height:320px}.film-panel{width:68%;left:16%;top:22%;border-width:3px}.film-hint{font-size:10px;margin:-10px 0 0}.film-info{padding:24px 20px;gap:10px}.film-meta{font-size:10px;line-height:1.6;max-width:190px}.film-title{font-size:28px}.film-play{font-size:12px;gap:8px;flex-direction:column}.film-play span{height:44px;width:44px}.film-bottom{padding:0 16px}.film-index{gap:20px}.film-index button{font-size:11px}.film-count{font-size:12px}}

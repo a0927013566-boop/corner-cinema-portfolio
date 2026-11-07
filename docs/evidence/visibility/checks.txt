@@ -1,0 +1,7 @@
+Observed test results, 2026-11-07 UTC
+PASS system reduced-motion opt-in, persisted choice, pause, no-WebGL CSS motion
+PASS film-gallery.cjs: normal / reduced opt-in / no-WebGL; seven works, automatic tour, keyboard, drag, native playback, seek, close, preserved catalogue
+PASS WebGL context loss preserves CSS space and navigation
+PASS viewport overflow: 320, 390, 768, 1440, 1920
+Full regression output: smoke.txt / spatial.txt
+These checks do not establish user design acceptance. No real phone or Safari / external YouTube streaming verification.

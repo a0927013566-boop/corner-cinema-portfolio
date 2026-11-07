@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "source": "使用者 2026-11-07：一步步優化原設計，禁止整站改掉；將禁止與必做事項寫入設定",
   "mode": "incremental_preserve_existing_design",
   "visualComparisonBaseline": "258d714936de23ff6684a54af71d80b16df3d500",
@@ -53,9 +53,10 @@
   "enforcement": "Persistent instructions and declarative settings; no universal automated visual or cross-provider enforcement is claimed.",
   "currentTask": {
     "modulesInOrder": [
-      "music_spatial_listening",
-      "hero_cinematic_depth",
-      "works_spatial_gallery"
+      "projection_gallery",
+      "sound_landscape",
+      "original_hero_atmosphere",
+      "site_motion_and_viewing"
     ],
     "replaceRejectedMusic": true,
     "real3DRequested": true,
@@ -64,14 +65,14 @@
     "preserveOriginalImagesAndComposition": true,
     "rejectGoldFinSculpture": true,
     "researchActualImmersive3DWebsitesBeforeFurtherEffects": true,
-    "implementationStatus": "film_gallery_deployed_and_publicly_verified",
+    "implementationStatus": "cinematic_refinement_in_progress",
     "implementedEffects": [
       "original_photo_depth_and_lens_light_2_5d",
       "original_work_css_3d_frames",
       "original_music_film_on_real_3d_display",
       "actual_audio_frequency_response"
     ],
-    "userDesignAcceptance": "88a2d94_rejected_new_film_gallery_not_yet_reviewed",
+    "userDesignAcceptance": "motion_perceived_but_design_judged_elementary",
     "verifiedImplementation": "633c47136f5adf1ce9daa8b9bcc6b41bf9396602"
   }
 }

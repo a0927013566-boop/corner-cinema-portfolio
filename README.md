@@ -37,3 +37,11 @@
 安裝 Playwright 與 Chromium 後執行 `node tests/smoke.cjs`；使用現有工具時可設 `PLAYWRIGHT_MODULE`、`CHROMIUM_PATH` 與 `BASE_URL`。測試涵蓋響應式、影片播放及定位、音樂播放、選集、深連結、鍵盤、關閉停止、無 JS 目錄與減少動態。YouTube 第三方串流可用性需另行實測，不由 UI 測試宣稱通過。
 
 設計來源、實測、截圖與操作錄影見 [設計紀錄](docs/design-plan.md)、[驗證紀錄](docs/validation.md)、[畫面證據](docs/evidence/README.md)。
+
+## 動態與立體聆聽
+
+最新設計計畫／驗證見 [spatial-design.md](docs/spatial-design.md)。`spatial.css` 管聆聽室與後續空間設計，`lib/sound-sculpture.js` 是實際3D幾何、相機和燈光；`lib/sound-experience.js` 接既有播放器的頻譜，`lib/motion.js` 共用減少動態／暫停。Three.js r180 在 `vendor/three/` 本地託管，含MIT授權，首頁不預載3D。
+
+`python3 scripts/build-waveforms.py`（需ffmpeg）從已授權MP3重建每首64個RMS振幅，再執行 `node scripts/build-catalog.mjs` 同步靜態HTML。換曲資料保留原來源，不以波形取代音訊。
+
+`node tests/spatial.cjs` 驗真正聲音反應、暫停動態、WebGL失效後仍播放和減少動態；同 smoke 測試的環境變數。軟體WebGL測試不是實體手機GPU性能保證。

@@ -1,0 +1,328 @@
+{
+  "preservedAssetsAndData": true,
+  "url": "https://a0927013566-boop.github.io/corner-cinema-portfolio/",
+  "commit": "08b885f2cc912a19c2a93e210571b82c9c7ea39b",
+  "checkedAt": "2026-11-07T03:41:17.118Z",
+  "files": [
+    {
+      "path": "cinematic.css",
+      "sha256": "27f502a55468ca5592af0d200e5c0794eedae6ec94366dfe081c4f9cc09799a4",
+      "status": 200
+    },
+    {
+      "path": "index.html",
+      "sha256": "9755a89d3a03e16db5dcdf5e7fd085c797fc2d44d2eb1406a97a0ca635e2dd1d",
+      "status": 200
+    },
+    {
+      "path": "lib/site-flow.js",
+      "sha256": "0beb23a20b9490e11623f636191b38a36c39f6987d7b82bae50c998a1c4ac4ad",
+      "status": 200
+    },
+    {
+      "path": "style.css",
+      "sha256": "e944dfa74baa26c15822fb3c51a0183d879d0839a0bc9a0a86cb5493d5522dfe",
+      "status": 200
+    },
+    {
+      "path": "lib/scene-motion.js",
+      "sha256": "15168d21f388e08273e84bdf069c71ef4f234075332f94fa2bd8fd4ce41e2b83",
+      "status": 200
+    },
+    {
+      "path": "lib/sound-experience.js",
+      "sha256": "ce94157b0df54b4d75f25fa0474a2f8353e75200d43f359e72d974603af4b258",
+      "status": 200
+    },
+    {
+      "path": "lib/artwork-stage.js",
+      "sha256": "d399c6cbc0086d7e975b63a3b14aaed973fc8169260e0fb6348bb56eb11b6e40",
+      "status": 200
+    },
+    {
+      "path": "assets/longnight-art.jpg",
+      "sha256": "425f47c1af94a822538ae2329949ad5da1de8048bdcb4bf003b541915348b7cc",
+      "status": 200
+    },
+    {
+      "path": "spatial.css",
+      "sha256": "26218fd3d2c347167527113aced4b997f02506c71fb7e5c8780ffa8e3a7e0b36",
+      "status": 200
+    },
+    {
+      "path": "script.js",
+      "sha256": "908269c8015477ba359e54810fe8f9ce14bb630be0af9992b2137e9bb1c5e5f3",
+      "status": 200
+    },
+    {
+      "path": "lib/film-gallery.js",
+      "sha256": "5b69c2df268d2b8a86e42802ec58c67868ee53ca5e5ae29ea041835d47149ae6",
+      "status": 200
+    },
+    {
+      "path": "film-gallery.css",
+      "sha256": "a497e6f35907ded8fae2a38bd6be6bfd1f9857ba3664e1b51674fd7c38bc2b8a",
+      "status": 200
+    },
+    {
+      "path": "lib/motion.js",
+      "sha256": "c971e85fcaaf09b483edda44d344bffcde8c975cdf10f91d8828329e33e0b7a4",
+      "status": 200
+    },
+    {
+      "path": "lib/film-scene.js",
+      "sha256": "62fb895ea8bd6bcc79016ff60185da48d4c2f56566d09c702a3ef8ca1c637ba9",
+      "status": 200
+    },
+    {
+      "path": "data/music.json",
+      "sha256": "a38c9dc8c478b39105f574918f14724f575b4e33458fc945a72566ca4b3f9ede",
+      "status": 200
+    },
+    {
+      "path": "data/works.json",
+      "sha256": "bd1bb210040beb2ad00d15950584ee33e51f4ed58ab180d0b49000daabcf2689",
+      "status": 200
+    },
+    {
+      "path": "docs/cinematic-direction.md",
+      "sha256": "44f6967720301fe4d747efef4c00d28b25ce1b5390daed6766b05d0172a47d51",
+      "status": 200
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "faac798c3cd1a65c69a0e32b53d6b562e2f8fa0dde05a85ce53f74a605866cc9",
+      "status": 200
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "2213495d3d294eb6c247905d50ec9b7f12dc5cd10eb250b36ff9ce9acbbd4855",
+      "status": 200
+    },
+    {
+      "path": "design-policy.json",
+      "sha256": "1e8de39b17eaa53699c1454bd1c6e2de7108b45ae94954fb239c9affbb6d4917",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/manifest.json",
+      "sha256": "dc3e1fb8199fd0bd65f127159e6b2aea56b6a1b28c44a52689c3d3de43cd4f5f",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-gallery-1440.png",
+      "sha256": "338032f87f839137413eac1288e4b87108771e7181d71c1c3c592531b8174345",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-gallery-390.png",
+      "sha256": "8c9a81541d16f17f795c7c859f11912ce3e758931b38ccda6724813bb4b403a1",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-hero-1440.png",
+      "sha256": "f2aa952d5318116830033deed5bff5081744e66b71a69901d7f8ddea80ba181d",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-hero-390.png",
+      "sha256": "f5553d8a437d475eda041085e8d618287215396256c06cd101319fb5b06c5797",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-sound-390.png",
+      "sha256": "3d3efd4b9a24032df91b71f751f6cc466c49cb406fd3c7f929529c74f2e8f660",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-sound-1440.png",
+      "sha256": "4f50e5787b73c4ab215f183b3d93c3eeb4ffd83ff809f6ca345c401d3ae221b6",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-gallery-1440.png",
+      "sha256": "0fbb530723218e2ca542cffe30bc94a30a9087cd480b4175abdee2bca470e48e",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-gallery-390.png",
+      "sha256": "81da43ae6ea61bb6adfc582f946ef787674d165283888f4a2ef65bfc9efa87e0",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-hero-390.png",
+      "sha256": "8e2b1db917ae6900ec82d4425484129cee16b6e5cfced20acf83bad669b07258",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-sound-1440.png",
+      "sha256": "f0c9e990b344ab7249d64c7b5f106be78388817e8568017677929aef5c693148",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-hero-1440.png",
+      "sha256": "46d666be6edca078f333bf7f5114844e75d60a5b6a042535f1c600c9139264e1",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/full-tests.txt",
+      "sha256": "642948df463151783d893e06145afca308ee5cba2a782d916bc2ac4d0ef2aa45",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-sound-390.png",
+      "sha256": "90672977a3606bf41396941dd0e2f6c96aa6de3ba1fd8469ba66d1a64a63d20b",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-desktop.png",
+      "sha256": "a7791bd8b39cb96ca1990f9461d8f58732e4b589ecad7ae3cbb2e880447a95f1",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/flow-tests.txt",
+      "sha256": "bedb191ec8ed397cfb848d994098e453fe7b0d66829122244762ca48e775b347",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-mobile.png",
+      "sha256": "f7af2be2a4ecde885945e7ba85b0de8ed018945cc1554c405381173f6eb72236",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-tests.txt",
+      "sha256": "6246d9ffecc5b6ab2dcf557d68adc248d1dd4beb405343a3789dc9621d1cb57a",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-fallback.png",
+      "sha256": "8e7f1b6808ae148ca1953886d6ec86c8f5fd3fe29085e4a3afcdd1a824261e70",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-refinement.webm",
+      "sha256": "9e9d021619d3c12fcbb324e71517cf2276a43eb8af8cc5ce8781bdc785d61284",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/motion-tests.txt",
+      "sha256": "60b02bcc2bbfa060e79b8893fffccf1abed3832d7d863e88400a2cc6d10430b5",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/hero-mobile.png",
+      "sha256": "58ca1ca019c9d32fa95dce6bcb61daa9c03c497c5e6c552dd00ad071733fd16b",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/hero-refinement.webm",
+      "sha256": "283507fb7a345d5b912fa73df079f91e35f7a6e4500c8e141c86edda8ae67d52",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/hero-desktop.png",
+      "sha256": "02ccacff8a7cf451d104700701a6a478a163f5633049528a42838baec0244d8a",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/player-desktop.png",
+      "sha256": "a9aefce1860b913114357161ded81d06baf765467b1987bdc75ed52e9798c92b",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/page-mobile.png",
+      "sha256": "c2ade3abd431d490b420f33588c722757276e68df1aa7a0b78cdaba1ad236693",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/page-desktop.png",
+      "sha256": "888028d2278f1cd2cc42478551beb4043a38c8af87d11ed570158f9442615c41",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/site-refinement.webm",
+      "sha256": "7522285f146b9fc731581df58ab75c5cbba3bc111e3fa7f03df8d35963474150",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-mobile.png",
+      "sha256": "89d406494c6b4184645f2ccf218bada3ac9691514c0ee22661ba485a53e78559",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-playing.png",
+      "sha256": "be933f0e165a4c4df11d59f2a328d819b278b1a9f484adb9d0eddd22770a2c11",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-refinement.webm",
+      "sha256": "f1745622d7b3e3f43799af8de74ff04075c6f02409b47373d99b0befbe749748",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-desktop.png",
+      "sha256": "9257a8a41c9e92829355ca6d54ba301a39129aa1718592b6f972e011b8d755e2",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/touch-tests.txt",
+      "sha256": "89d4415344ade3f0b2ade3e2078c5cb198d501e1294cf2c4e34cefae0d85f2c1",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-tests.txt",
+      "sha256": "8c9210d47ee8d88e2fcbe3d265ee71c416273ee35ca2d7f1e38e6b55cd8a1869",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/cinematic/works-desktop.png",
+      "sha256": "28ec326ec8fe425e37adb75c87b5b31888e958819124c0ea71a6266aeb5ec77c",
+      "status": 200
+    }
+  ],
+  "ui": [
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "overflow": false
+    }
+  ],
+  "media": [
+    {
+      "id": "longnight",
+      "currentTime": 45.016023,
+      "duration": 183.866667,
+      "paused": false
+    },
+    {
+      "id": "track-07",
+      "audioReactive": true,
+      "synchronizedFilm": true,
+      "currentTime": 2.040551,
+      "duration": 183.891854,
+      "paused": false
+    }
+  ],
+  "errors": [],
+  "effects": {
+    "renderer": "webgl",
+    "sevenWorks": 7,
+    "manualNavigation": true,
+    "liveNativePlayback": true,
+    "reducedMotionManualOptIn": true,
+    "heroImageUnchanged": true,
+    "liveAudioReactive": true,
+    "liveSynchronizedFilm": true
+  }
+}

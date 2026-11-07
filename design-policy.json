@@ -65,7 +65,7 @@
     "preserveOriginalImagesAndComposition": true,
     "rejectGoldFinSculpture": true,
     "researchActualImmersive3DWebsitesBeforeFurtherEffects": true,
-    "implementationStatus": "four_modules_implemented_local_verified_public_check_pending",
+    "implementationStatus": "four_modules_merged_and_publicly_verified",
     "implementedEffects": [
       "curved_work_projections_with_source_matched_reflections",
       "audio_driven_spatial_contour_landscape_and_synchronized_original_film",
@@ -73,6 +73,7 @@
       "shared_section_arrivals_native_dialog_transitions_and_location_navigation"
     ],
     "userDesignAcceptance": "motion_perceived_but_design_judged_elementary",
-    "verifiedImplementation": "633c47136f5adf1ce9daa8b9bcc6b41bf9396602"
+    "verifiedImplementation": "08b885f2cc912a19c2a93e210571b82c9c7ea39b",
+    "publicVerification": "docs/evidence/cinematic/public-check.json"
   }
 }

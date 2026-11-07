@@ -3,7 +3,9 @@ import {createListeningPlayer} from './lib/listening.js';
 import {initSoundExperience, setSoundTrack} from './lib/sound-experience.js';
 initSoundExperience();
 import {initSceneMotion} from './lib/scene-motion.js';
+import {initGalleryMotion} from './lib/gallery-motion.js';
 initSceneMotion();
+initGalleryMotion();
 (() => {
   const $ = (selector) => document.querySelector(selector);
   const dialog = $('#player-dialog');

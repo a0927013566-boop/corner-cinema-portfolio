@@ -13,6 +13,8 @@
 
 ## 接手修改
 
+新增影片、音樂、替換頂部主打與交給 Grok Bot 維護，先讀[使用與 AI 維護手冊](docs/maintenance-guide.md)。包含可套用欄位、目前程式限制、重建／發布／復原與接手指令；不是自動後台或 Bot 授權。
+
 **修改前先讀 [AGENTS.md](AGENTS.md) 與 [design-policy.json](design-policy.json)。使用者已否決 a80eaa0 的視覺方向；後續須保留原設計，逐區塊改善。**
 
 - `data/works.json`：作品、海報、影片來源、影集順序與 AI 示範說明。

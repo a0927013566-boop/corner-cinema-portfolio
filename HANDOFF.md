@@ -1,5 +1,7 @@
 # 接手紀錄
 
+> **維護交接新增（2026-11-07）：**本人要讓 Grok Bot 接手，已建立 [使用與 AI 維護手冊](docs/maintenance-guide.md)，含正式網址、觀眾操作、影片／音樂 JSON 範例、靜態目錄重建、頂部主打更換、動態素材相依、部署／復原與 Bot 接手指令。核對到三個易漏處：單支 YouTube 的靜態目錄、`changye` 固定上／下標籤、`track-07` 專屬同步 MV；手冊說明當次真正新增時的處理，沒有聲稱它們已改成通用後台。本次僅增補文件與入口，網站內容、主打和執行碼不變。
+
 > **本輪優先（2026-11-07）：**本人對633c471回饋「有感覺，但非常初級」。已依[電影感整合方向](docs/cinematic-direction.md)完成C1曲面放映／同源倒影、C2音訊地景／原MV同步、C3原照片路燈／薄霧、C4導覽與觀影轉場，分階段PR18–22已合併讀回，最終實作08b885f2cc912a19c2a93e210571b82c9c7ea39b，Pages run42335037192成功。原首頁構圖、7組／19集／5影片／41曲與排除項保留。整站本機回歸與實看完成；正式HTTPS55檔SHA一致、4寬度無溢位、選片／MV實播與45秒定位、真音訊地景／原MV同步、減少動態手動開啟皆通過，JS例外0。最新[證據manifest](docs/evidence/cinematic/manifest.json)與[公開讀回](docs/evidence/cinematic/public-check.json)可查。真機Safari／第三方YouTube串流未驗。本人尚未評價這輪，不能稱質感已被認可。以下是歷史，不能覆蓋本段。
 
 > **公開驗證完成：**PR15動態控制、PR16立體放映廊已依序合併。實作 `633c47136f5adf1ce9daa8b9bcc6b41bf9396602`，[Pages run42328636750](https://github.com/a0927013566-boop/corner-cinema-portfolio/actions/runs/42328636750) build/deploy成功；正式HTTPS25檔SHA一致，4寬度無溢位，七組選片、原生MV播放與45秒定位、系統減少動態手動開啟通過，JS例外0。結果見[公開讀回](docs/evidence/visibility/public-check.json)。本段只記部署／功能，未取得本人對新展廊的設計評價。

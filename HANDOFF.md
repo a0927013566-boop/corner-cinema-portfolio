@@ -1,6 +1,6 @@
 # 接手紀錄
 
-> **本輪優先（2026-11-07）：**本人對633c471回饋「有感覺，但非常初級」。已依[電影感整合方向](docs/cinematic-direction.md)完成C1曲面放映／同源倒影、C2音訊地景／原MV同步、C3原照片路燈／薄霧、C4導覽與觀影轉場，分階段PR18–21已合併，C4正在提交與公開驗證。原首頁構圖、7組／19集／5影片／41曲與排除項保留。整站本機回歸與實看完成；最新證據在docs/evidence/cinematic/。本人尚未評價這輪，不能稱質感已被認可。以下是歷史，不能覆蓋本段。
+> **本輪優先（2026-11-07）：**本人對633c471回饋「有感覺，但非常初級」。已依[電影感整合方向](docs/cinematic-direction.md)完成C1曲面放映／同源倒影、C2音訊地景／原MV同步、C3原照片路燈／薄霧、C4導覽與觀影轉場，分階段PR18–22已合併讀回，最終實作08b885f2cc912a19c2a93e210571b82c9c7ea39b，Pages run42335037192成功。原首頁構圖、7組／19集／5影片／41曲與排除項保留。整站本機回歸與實看完成；正式HTTPS55檔SHA一致、4寬度無溢位、選片／MV實播與45秒定位、真音訊地景／原MV同步、減少動態手動開啟皆通過，JS例外0。最新[證據manifest](docs/evidence/cinematic/manifest.json)與[公開讀回](docs/evidence/cinematic/public-check.json)可查。真機Safari／第三方YouTube串流未驗。本人尚未評價這輪，不能稱質感已被認可。以下是歷史，不能覆蓋本段。
 
 > **公開驗證完成：**PR15動態控制、PR16立體放映廊已依序合併。實作 `633c47136f5adf1ce9daa8b9bcc6b41bf9396602`，[Pages run42328636750](https://github.com/a0927013566-boop/corner-cinema-portfolio/actions/runs/42328636750) build/deploy成功；正式HTTPS25檔SHA一致，4寬度無溢位，七組選片、原生MV播放與45秒定位、系統減少動態手動開啟通過，JS例外0。結果見[公開讀回](docs/evidence/visibility/public-check.json)。本段只記部署／功能，未取得本人對新展廊的設計評價。
 

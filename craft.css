@@ -1,0 +1,39 @@
+/* Craft layer (2026-11-07). Added on top of the existing design; it changes texture and detail, not layout or content. */
+:root {
+  --slate:"SFMono-Regular","JetBrains Mono","Cascadia Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --grain-opacity:.075;
+}
+
+/* S1 · Film grain: a very light silver-halide texture over the whole page, so flat paper and ink fields read as material.
+   Static alpha specks (no blend mode, no animation) keep scrolling and the WebGL scenes at full frame rate; the player dialog stays clean. */
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:60;
+  pointer-events:none;
+  opacity:var(--grain-opacity);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 2.4 -1.25'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size:180px 180px;
+}
+body.modal-open::after { opacity:0; }
+
+/* S1 · Slate numerals: every time code, episode count and index number speaks one precise, film-slate voice. */
+.poster-meta,
+.film-stills figcaption,
+.button-time,
+.track-duration,
+.track-number,
+.film-count,
+.work-topline span {
+  font-family:var(--slate);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.06em;
+}
+.poster-meta,.button-time { font-size:12px; }
+.film-stills figcaption { font-size:11px; letter-spacing:.1em; }
+.film-count { font-size:11px; letter-spacing:.12em; }
+.group-count,.result-count { font-variant-numeric:tabular-nums; }
+.work-topline span,.track-number { font-size:11px; letter-spacing:.14em; }
+
+@media print { body::after { display:none; } }

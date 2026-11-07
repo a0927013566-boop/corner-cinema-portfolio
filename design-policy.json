@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "source": "使用者 2026-11-07：一步步優化原設計，禁止整站改掉；將禁止與必做事項寫入設定",
   "mode": "incremental_preserve_existing_design",
   "visualComparisonBaseline": "258d714936de23ff6684a54af71d80b16df3d500",
@@ -7,6 +7,10 @@
     {
       "commit": "a80eaa0344d22c8427d91c74988530693e4ad1e3",
       "reason": "使用者否決：單調、缺內容、原本設計被拿掉；功能驗證不代表設計通過"
+    },
+    {
+      "commit": "f8afbf094048514e00822de4d76eebd49fed142c",
+      "reason": "使用者認為改善幅度不足、音樂區已明確否決；要求真正動態、立體、美觀與質感"
     }
   ],
   "maxDesignModulesPerStep": 1,
@@ -38,5 +42,16 @@
     "update_existing_progress_with_rejections_and_next_module",
     "verify_authorized_merge_and_public_deployment_if_claimed"
   ],
-  "enforcement": "Persistent instructions and declarative settings; no universal automated visual or cross-provider enforcement is claimed."
+  "enforcement": "Persistent instructions and declarative settings; no universal automated visual or cross-provider enforcement is claimed.",
+  "currentTask": {
+    "modulesInOrder": [
+      "music_spatial_listening",
+      "hero_cinematic_depth",
+      "works_spatial_gallery"
+    ],
+    "replaceRejectedMusic": true,
+    "real3DRequested": true,
+    "smallTweaksAreNotCompletion": true,
+    "retainContentPlaybackAndIdentity": true
+  }
 }

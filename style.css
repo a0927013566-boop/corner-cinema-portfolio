@@ -127,8 +127,9 @@ em,i {
   align-items:center;
   justify-content:space-between;
   gap:28px;
-  border-bottom:1px solid var(--line);
-  background:var(--paper);
+  border-bottom:1px solid #394038;
+  background:#171a17;
+  color:var(--paper);
   position:sticky;
   top:0;
   z-index:10;
@@ -163,7 +164,17 @@ em,i {
 }
 
 .header nav a:hover {
-  border-color:var(--ink);
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+.header a:focus-visible {
+  outline-color:var(--gold);
+}
+
+.header .brand small,
+.header .header-note {
+  color:#d0d2c5;
 }
 
 .header-note {

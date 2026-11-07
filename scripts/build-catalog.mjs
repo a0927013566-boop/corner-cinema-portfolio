@@ -12,6 +12,5 @@ console.log(`${works.length} work groups, ${tracks.length} audio tracks`);
 const indexURL = new URL('../index.html',import.meta.url);
 const index = fs.readFileSync(indexURL, 'utf8')
   .replace(/<!-- WORKS:START -->[\s\S]*?<!-- WORKS:END -->/, `<!-- WORKS:START -->${workMarkup(works)}<!-- WORKS:END -->`)
-  .replace(/<!-- SOUND:START -->[\s\S]*?<!-- SOUND:END -->/, `<!-- SOUND:START -->${tracks.find(t=>t.id==='track-07').waveform.map(p=>`<i style="--peak:${p}"></i>`).join('')}<!-- SOUND:END -->`)
   .replace(/<!-- TRACKS:START -->[\s\S]*?<!-- TRACKS:END -->/, `<!-- TRACKS:START -->${trackMarkup(tracks.filter(t => t.group === 'song'))}<!-- TRACKS:END -->`);
 fs.writeFileSync(indexURL, index);

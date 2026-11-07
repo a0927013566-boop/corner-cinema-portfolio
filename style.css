@@ -187,10 +187,11 @@ em,i {
 .hero {
   position:relative;
   isolation:isolate;
-  min-height:610px;
+  min-height:680px;
+  height:min(780px,calc(100svh - 94px));
   background:#172324;
   color:#fff;
-  margin:22px 24px 0;
+  margin:0 24px;
   overflow:hidden;
 }
 
@@ -212,7 +213,7 @@ em,i {
 }
 
 .hero-content {
-  padding:62px 64px 138px;
+  padding:88px 64px 138px;
 }
 
 .eyebrow {
@@ -1381,8 +1382,8 @@ em,i {
     font-size:15px;
   }
   .hero {
-    margin:16px 16px 0;
-    min-height:560px;
+    margin:0 16px;
+    min-height:640px;
   }
   .hero-content {
     padding:48px 28px 134px;
@@ -1596,11 +1597,12 @@ em,i {
     font-size:16px;
   }
   .hero {
-    margin:10px 10px 0;
-    min-height:520px;
+    margin:0 10px;
+    min-height:620px;
+    height:calc(88svh - 135px);
   }
   .hero-content {
-    padding:34px 22px 126px;
+    padding:48px 22px 126px;
   }
   .hero .eyebrow {
     font-size:14px;

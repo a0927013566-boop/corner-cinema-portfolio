@@ -117,3 +117,27 @@ html[data-motion=paused] .spatial-poster { transform:none; transition:none; }
 html[data-motion=running] .sound-sculpture:not([data-ready=true]) .sound-fallback img { animation:projection-drift 10s ease-in-out infinite alternate; }
 @keyframes projection-drift { from { transform:perspective(900px) rotateY(-20deg) rotateX(5deg) translateY(0); } to { transform:perspective(900px) rotateY(15deg) rotateX(-3deg) translateY(-12px); } }
 html[data-motion=paused] .sound-fallback img { animation:none; }
+
+/* Sound landscape: the original film floats above the music's contours. */
+.sound-stage { min-height:715px; }
+.sound-sculpture { top:20px; right:-6%; width:85%; height:600px; }
+.sound-sculpture::after { content:""; position:absolute; inset:80% 0 0; background:linear-gradient(transparent,#111814); pointer-events:none; }
+.sound-heading { width:36%; padding-top:84px; }
+.sound-heading h2 { font-size:clamp(48px,5.1vw,76px); }
+.motion-toggle,.hero-motion { border-radius:30px; }
+.sound-orbit-label { bottom:162px; right:1%; letter-spacing:.16em; }
+.sound-fallback { inset:12% 10% 26%; }
+.sound-fallback img { transform:perspective(1100px) rotateY(-7deg); }
+@media(max-width:900px){
+ .sound-heading { width:42%; }
+ .sound-heading h2 { font-size:56px; }
+ .sound-sculpture { width:91%; right:-16%; }
+}
+@media(max-width:600px){
+ .sound-stage { min-height:760px; }
+ .sound-heading { width:100%; padding-top:44px; }
+ .sound-heading h2 { font-size:52px; }
+ .sound-sculpture { top:230px; height:365px; width:120%; right:-10%; }
+ .sound-orbit-label { bottom:165px; right:0; }
+}
+.sound-sculpture { mask-image:linear-gradient(90deg,transparent,#000 13%,#000 90%,transparent); }

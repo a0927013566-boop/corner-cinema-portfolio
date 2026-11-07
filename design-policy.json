@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "source": "使用者 2026-11-07：一步步優化原設計，禁止整站改掉；將禁止與必做事項寫入設定",
+  "mode": "incremental_preserve_existing_design",
+  "visualComparisonBaseline": "258d714936de23ff6684a54af71d80b16df3d500",
+  "rejectedVisualVersions": [
+    {
+      "commit": "a80eaa0344d22c8427d91c74988530693e4ad1e3",
+      "reason": "使用者否決：單調、缺內容、原本設計被拿掉；功能驗證不代表設計通過"
+    }
+  ],
+  "maxDesignModulesPerStep": 1,
+  "prohibited": [
+    "unrequested_full_site_redesign",
+    "silently_replacing_brand_style_or_content_structure",
+    "sacrificing_existing_design_content_or_function_for_one_metric",
+    "publishing_excluded_or_private_material",
+    "restoring_retired_cc_mark",
+    "claiming_unperformed_reads_visual_checks_playback_or_deployment",
+    "treating_functional_tests_as_user_design_acceptance",
+    "treating_rejected_visual_design_as_success",
+    "erasing_feedback_or_using_an_outdated_snapshot"
+  ],
+  "requiredBeforeEdit": [
+    "read_current_rules_skills_and_user_feedback",
+    "name_one_module_and_its_specific_problem",
+    "inspect_baseline_at_matching_desktop_and_mobile_viewports",
+    "list_preserved_design_features_content_and_functions",
+    "state_knowledge_applied_and_bounded_change",
+    "define_visual_and_functional_acceptance_separately"
+  ],
+  "requiredBeforeReportingDone": [
+    "inspect_actual_before_after_images",
+    "check_whole_page_for_regressions",
+    "exercise_affected_interactions",
+    "distinguish_self_review_user_feedback_and_unverified_items",
+    "present_current_step_before_moving_to_unrelated_design_changes",
+    "update_existing_progress_with_rejections_and_next_module",
+    "verify_authorized_merge_and_public_deployment_if_claimed"
+  ],
+  "enforcement": "Persistent instructions and declarative settings; no universal automated visual or cross-provider enforcement is claimed."
+}

@@ -9,7 +9,7 @@
 .film-space[data-dragging=true]{cursor:grabbing}
 .film-space canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .film-fallback{position:absolute;inset:0;perspective:900px;perspective-origin:50% 40%;pointer-events:none}
-.film-panel{display:block;position:absolute;left:25%;top:17%;width:50%;aspect-ratio:16/9;border:4px solid #566052;padding:0;background:#161d18;box-shadow:0 25px 30px #0009,6px 3px 0 #89917d;transform:translateX(var(--x,0%)) translateZ(var(--z,0px)) rotateY(var(--yaw,0deg));transform-style:preserve-3d}
+.film-panel{display:block;position:absolute;left:29%;top:19%;width:42%;aspect-ratio:16/9;border:4px solid #566052;padding:0;background:#161d18;box-shadow:0 25px 30px #0009,6px 3px 0 #89917d;transform:translateX(var(--x,0%)) translateZ(var(--z,0px)) rotateY(var(--yaw,0deg));transform-style:preserve-3d}
 .film-panel img{width:100%;height:100%;object-fit:cover;display:block;user-select:none}
 .film-gallery[data-renderer=webgl] .film-fallback{visibility:hidden}
 .film-gallery[data-renderer=css] canvas{visibility:hidden}

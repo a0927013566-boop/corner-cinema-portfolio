@@ -65,12 +65,12 @@
     "preserveOriginalImagesAndComposition": true,
     "rejectGoldFinSculpture": true,
     "researchActualImmersive3DWebsitesBeforeFurtherEffects": true,
-    "implementationStatus": "cinematic_refinement_in_progress",
+    "implementationStatus": "four_modules_implemented_local_verified_public_check_pending",
     "implementedEffects": [
-      "original_photo_depth_and_lens_light_2_5d",
-      "original_work_css_3d_frames",
-      "original_music_film_on_real_3d_display",
-      "actual_audio_frequency_response"
+      "curved_work_projections_with_source_matched_reflections",
+      "audio_driven_spatial_contour_landscape_and_synchronized_original_film",
+      "original_photo_lamplight_mist_and_depth_2_5d",
+      "shared_section_arrivals_native_dialog_transitions_and_location_navigation"
     ],
     "userDesignAcceptance": "motion_perceived_but_design_judged_elementary",
     "verifiedImplementation": "633c47136f5adf1ce9daa8b9bcc6b41bf9396602"

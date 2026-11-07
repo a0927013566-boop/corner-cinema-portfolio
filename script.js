@@ -1,10 +1,12 @@
+import {initSiteFlow} from './lib/site-flow.js?v=cinematic-1';
+initSiteFlow();
 import {external, workMarkup, trackMarkup, episodeDuration} from './lib/catalog.mjs';
 import {createListeningPlayer} from './lib/listening.js';
-import {initSoundExperience, setSoundTrack} from './lib/sound-experience.js';
+import {initSoundExperience, setSoundTrack} from './lib/sound-experience.js?v=cinematic-1';
 initSoundExperience();
-import {initSceneMotion} from './lib/scene-motion.js';
-import {initFilmGallery} from './lib/film-gallery.js';
-import {initGalleryMotion} from './lib/gallery-motion.js';
+import {initSceneMotion} from './lib/scene-motion.js?v=cinematic-1';
+import {initFilmGallery} from './lib/film-gallery.js?v=cinematic-1';
+import {initGalleryMotion} from './lib/gallery-motion.js?v=cinematic-1';
 initSceneMotion();
 initGalleryMotion();
 (() => {

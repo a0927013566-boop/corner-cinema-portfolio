@@ -1,0 +1,1 @@
+PASS emulated touch: horizontal selection and native vertical page scroll

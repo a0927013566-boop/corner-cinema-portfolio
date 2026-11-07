@@ -1,0 +1,206 @@
+{
+  "date": "2026-11-07",
+  "baseline": "a0d501b023c9e94be1e77622bb8aa7fbc4d983e5",
+  "comparison": "compare-before/after: 1440 or 390 × 1000, reduced motion, matching section tops below header. Baseline re-rendered from exact git files using browser route overrides; no working-tree replacement.",
+  "recordingMethod": "Playwright actual browser recording, normal speed, no composited motion. Silent UI recordings; playback and real audio analysis tested separately.",
+  "acceptance": "User perceived 633c471 motion but judged it elementary; this revision self-reviewed, no user acceptance claimed.",
+  "recordings": [
+    {
+      "file": "gallery-refinement.webm",
+      "durationSeconds": 50.72,
+      "speed": 1,
+      "audio": false
+    },
+    {
+      "file": "hero-refinement.webm",
+      "durationSeconds": 12.52,
+      "speed": 1,
+      "audio": false
+    },
+    {
+      "file": "site-refinement.webm",
+      "durationSeconds": 62.84,
+      "speed": 1,
+      "audio": false
+    },
+    {
+      "file": "sound-refinement.webm",
+      "durationSeconds": 13.72,
+      "speed": 1,
+      "audio": false
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/evidence/cinematic/compare-after-gallery-1440.png",
+      "bytes": 819983,
+      "sha256": "338032f87f839137413eac1288e4b87108771e7181d71c1c3c592531b8174345"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-gallery-390.png",
+      "bytes": 217853,
+      "sha256": "8c9a81541d16f17f795c7c859f11912ce3e758931b38ccda6724813bb4b403a1"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-hero-1440.png",
+      "bytes": 1085392,
+      "sha256": "f2aa952d5318116830033deed5bff5081744e66b71a69901d7f8ddea80ba181d"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-hero-390.png",
+      "bytes": 333714,
+      "sha256": "f5553d8a437d475eda041085e8d618287215396256c06cd101319fb5b06c5797"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-sound-1440.png",
+      "bytes": 661499,
+      "sha256": "4f50e5787b73c4ab215f183b3d93c3eeb4ffd83ff809f6ca345c401d3ae221b6"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-after-sound-390.png",
+      "bytes": 231297,
+      "sha256": "3d3efd4b9a24032df91b71f751f6cc466c49cb406fd3c7f929529c74f2e8f660"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-gallery-1440.png",
+      "bytes": 608853,
+      "sha256": "0fbb530723218e2ca542cffe30bc94a30a9087cd480b4175abdee2bca470e48e"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-gallery-390.png",
+      "bytes": 186138,
+      "sha256": "81da43ae6ea61bb6adfc582f946ef787674d165283888f4a2ef65bfc9efa87e0"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-hero-1440.png",
+      "bytes": 1084491,
+      "sha256": "46d666be6edca078f333bf7f5114844e75d60a5b6a042535f1c600c9139264e1"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-hero-390.png",
+      "bytes": 332734,
+      "sha256": "8e2b1db917ae6900ec82d4425484129cee16b6e5cfced20acf83bad669b07258"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-sound-1440.png",
+      "bytes": 455974,
+      "sha256": "f0c9e990b344ab7249d64c7b5f106be78388817e8568017677929aef5c693148"
+    },
+    {
+      "path": "docs/evidence/cinematic/compare-before-sound-390.png",
+      "bytes": 181768,
+      "sha256": "90672977a3606bf41396941dd0e2f6c96aa6de3ba1fd8469ba66d1a64a63d20b"
+    },
+    {
+      "path": "docs/evidence/cinematic/flow-tests.txt",
+      "bytes": 181,
+      "sha256": "bedb191ec8ed397cfb848d994098e453fe7b0d66829122244762ca48e775b347"
+    },
+    {
+      "path": "docs/evidence/cinematic/full-tests.txt",
+      "bytes": 428,
+      "sha256": "642948df463151783d893e06145afca308ee5cba2a782d916bc2ac4d0ef2aa45"
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-desktop.png",
+      "bytes": 764764,
+      "sha256": "a7791bd8b39cb96ca1990f9461d8f58732e4b589ecad7ae3cbb2e880447a95f1"
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-fallback.png",
+      "bytes": 644007,
+      "sha256": "8e7f1b6808ae148ca1953886d6ec86c8f5fd3fe29085e4a3afcdd1a824261e70"
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-mobile.png",
+      "bytes": 193120,
+      "sha256": "f7af2be2a4ecde885945e7ba85b0de8ed018945cc1554c405381173f6eb72236"
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-refinement.webm",
+      "bytes": 5761316,
+      "sha256": "9e9d021619d3c12fcbb324e71517cf2276a43eb8af8cc5ce8781bdc785d61284"
+    },
+    {
+      "path": "docs/evidence/cinematic/gallery-tests.txt",
+      "bytes": 312,
+      "sha256": "6246d9ffecc5b6ab2dcf557d68adc248d1dd4beb405343a3789dc9621d1cb57a"
+    },
+    {
+      "path": "docs/evidence/cinematic/hero-desktop.png",
+      "bytes": 1089623,
+      "sha256": "02ccacff8a7cf451d104700701a6a478a163f5633049528a42838baec0244d8a"
+    },
+    {
+      "path": "docs/evidence/cinematic/hero-mobile.png",
+      "bytes": 291311,
+      "sha256": "58ca1ca019c9d32fa95dce6bcb61daa9c03c497c5e6c552dd00ad071733fd16b"
+    },
+    {
+      "path": "docs/evidence/cinematic/hero-refinement.webm",
+      "bytes": 1396328,
+      "sha256": "283507fb7a345d5b912fa73df079f91e35f7a6e4500c8e141c86edda8ae67d52"
+    },
+    {
+      "path": "docs/evidence/cinematic/motion-tests.txt",
+      "bytes": 80,
+      "sha256": "60b02bcc2bbfa060e79b8893fffccf1abed3832d7d863e88400a2cc6d10430b5"
+    },
+    {
+      "path": "docs/evidence/cinematic/page-desktop.png",
+      "bytes": 4935493,
+      "sha256": "888028d2278f1cd2cc42478551beb4043a38c8af87d11ed570158f9442615c41"
+    },
+    {
+      "path": "docs/evidence/cinematic/page-mobile.png",
+      "bytes": 2066060,
+      "sha256": "c2ade3abd431d490b420f33588c722757276e68df1aa7a0b78cdaba1ad236693"
+    },
+    {
+      "path": "docs/evidence/cinematic/player-desktop.png",
+      "bytes": 813663,
+      "sha256": "a9aefce1860b913114357161ded81d06baf765467b1987bdc75ed52e9798c92b"
+    },
+    {
+      "path": "docs/evidence/cinematic/site-refinement.webm",
+      "bytes": 7605440,
+      "sha256": "7522285f146b9fc731581df58ab75c5cbba3bc111e3fa7f03df8d35963474150"
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-desktop.png",
+      "bytes": 605598,
+      "sha256": "9257a8a41c9e92829355ca6d54ba301a39129aa1718592b6f972e011b8d755e2"
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-mobile.png",
+      "bytes": 209109,
+      "sha256": "89d406494c6b4184645f2ccf218bada3ac9691514c0ee22661ba485a53e78559"
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-playing.png",
+      "bytes": 593272,
+      "sha256": "be933f0e165a4c4df11d59f2a328d819b278b1a9f484adb9d0eddd22770a2c11"
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-refinement.webm",
+      "bytes": 1708228,
+      "sha256": "f1745622d7b3e3f43799af8de74ff04075c6f02409b47373d99b0befbe749748"
+    },
+    {
+      "path": "docs/evidence/cinematic/sound-tests.txt",
+      "bytes": 97,
+      "sha256": "8c9210d47ee8d88e2fcbe3d265ee71c416273ee35ca2d7f1e38e6b55cd8a1869"
+    },
+    {
+      "path": "docs/evidence/cinematic/touch-tests.txt",
+      "bytes": 74,
+      "sha256": "89d4415344ade3f0b2ade3e2078c5cb198d501e1294cf2c4e34cefae0d85f2c1"
+    },
+    {
+      "path": "docs/evidence/cinematic/works-desktop.png",
+      "bytes": 577782,
+      "sha256": "28ec326ec8fe425e37adb75c87b5b31888e958819124c0ea71a6266aeb5ec77c"
+    }
+  ],
+  "totalBytes": 35455982
+}

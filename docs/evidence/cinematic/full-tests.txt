@@ -1,0 +1,8 @@
+video play / seek / stop longnight
+video play / seek / stop streetlight
+video play / seek / stop community-white
+video play / seek / stop community-paper
+video play / seek / stop wedding
+persistent audio playback / close 41 tracks
+PASS queue snapshot / natural end / mutual exclusion / Back / share fallback / keyboard
+PASS responsive, all native playback, static fallback, 503 / 404, reduced motion; YouTube streams NOT tested

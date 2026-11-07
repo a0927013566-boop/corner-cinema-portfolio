@@ -1,0 +1,98 @@
+{
+  "files": [
+    {
+      "path": "assets/stills/longnight-1.jpg",
+      "bytes": 32333,
+      "sha256": "dfda6b11da4313ab8ee7843eabd33db53e5e96a640f4c2810111642a4103fbdd"
+    },
+    {
+      "path": "assets/stills/longnight-2.jpg",
+      "bytes": 46733,
+      "sha256": "63d1bb190ec1de9f2e7e8525cc7105a9325f44e1115811fde4fc45788f6e4b71"
+    },
+    {
+      "path": "assets/stills/longnight-3.jpg",
+      "bytes": 53065,
+      "sha256": "54fe4f4f7c5d4c200344d6bcd73be32249febc105120ccaef93a35343b4a0198"
+    },
+    {
+      "path": "assets/stills/streetlight-1.jpg",
+      "bytes": 52156,
+      "sha256": "5d857f6ff22c0afe62e7c8564005f3a0d6ba4c9ea4c63e06894da4253620edd0"
+    },
+    {
+      "path": "assets/stills/streetlight-2.jpg",
+      "bytes": 49465,
+      "sha256": "6d77a12fe8f58a720f5c5e576d7e2beb331ccaa503cf8a37fe24b8b61380b0b2"
+    },
+    {
+      "path": "assets/stills/streetlight-3.jpg",
+      "bytes": 44406,
+      "sha256": "107b3e518bc1106689c88690d22f85db0ae8ffbb3eed78fb28f8459e8520fe6b"
+    },
+    {
+      "path": "docs/evidence/incremental/header-before-1440-top.jpg",
+      "bytes": 137566,
+      "sha256": "3e725679d4b95dcc3e26e7fb2bb78a2aa314bdf72c7942ec0a295739cdbdc380"
+    },
+    {
+      "path": "docs/evidence/incremental/header-check.json",
+      "bytes": 723,
+      "sha256": "8ed94f8d4771f194f1c792fbc4344126093b7cd044d487be0ec71829fa87e1af"
+    },
+    {
+      "path": "docs/evidence/incremental/hero-after-1440-top.jpg",
+      "bytes": 139076,
+      "sha256": "1997e77835b6d707e1c3c4999c83ef4bd1d77cf228138dfc06bdf962ec9f1b24"
+    },
+    {
+      "path": "docs/evidence/incremental/hero-check.json",
+      "bytes": 661,
+      "sha256": "b8af9e5c3f9d38bb95dcb7d6ebc565acd0ea8ee157666a1fb83fcf0a707985e4"
+    },
+    {
+      "path": "docs/evidence/incremental/interaction.mp4",
+      "bytes": 1138209,
+      "sha256": "23c8228daad2181986096896c905796d12a7ba37d8bf4a0ed7bbf5721bfd00d7"
+    },
+    {
+      "path": "docs/evidence/incremental/mv-before-1440.jpg",
+      "bytes": 145646,
+      "sha256": "b0953be5cc4999cb5e2c4e9f08b0f08c27e9f98ef71fb4c53e283afffc4e04e2"
+    },
+    {
+      "path": "docs/evidence/incremental/mv-check.json",
+      "bytes": 780,
+      "sha256": "4846218e207f09440adac4b94b41c17855d2dea9aad8b5e6bf5ef7fa1a8130c4"
+    },
+    {
+      "path": "docs/evidence/incremental/mv-notes-320.jpg",
+      "bytes": 25176,
+      "sha256": "c57351b964d4806c8c041c863e6a3f18db876d54c8b73a76ffc1906b59b33f13"
+    },
+    {
+      "path": "docs/evidence/incremental/mv-result-1440.jpg",
+      "bytes": 202477,
+      "sha256": "67d8997e9f62686f28ac68be3887d6adace769232651629bd0d9aef430f17c7b"
+    }
+  ],
+  "stills": {
+    "longnight": {
+      "source": "media/longnight-web.mp4",
+      "seconds": [
+        33,
+        87,
+        145
+      ]
+    },
+    "streetlight": {
+      "source": "media/streetlight-web.mp4",
+      "seconds": [
+        14,
+        85,
+        130
+      ]
+    }
+  },
+  "recording": "Actual local Chromium interaction; no audio track; one-pixel padding for H.264. No external-site images published."
+}

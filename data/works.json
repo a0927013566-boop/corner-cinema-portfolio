@@ -125,7 +125,28 @@
     "label": "音樂 MV",
     "poster": "assets/longnight.jpg",
     "src": "media/longnight-web.mp4",
-    "description": "以原創歌曲與 AI 影像，走過夜色中的一段旅程。中英字幕完整版。"
+    "description": "以原創歌曲與 AI 影像，走過夜色中的一段旅程。中英字幕完整版。",
+    "notes": {
+      "story": "一個人在雨後的山路前行，經過夜色與晨曦，最後走向日出。讓光線的轉變，陪著歌曲完成從低谷到繼續向前的旅程。",
+      "craft": "以 AI 圖像編排成 28 個鏡頭，透過推近、拉遠與橫移帶出視線和情緒；換鏡配合人聲與節拍，保留完整中英字幕。",
+      "stills": [
+        {
+          "time": "00:33",
+          "alt": "夜色中，背著背包的男子回望雨後城市。",
+          "src": "assets/stills/longnight-1.jpg"
+        },
+        {
+          "time": "01:27",
+          "alt": "藍調晨曦中，男子倚著護欄望向山城與河流。",
+          "src": "assets/stills/longnight-2.jpg"
+        },
+        {
+          "time": "02:25",
+          "alt": "金色日出照亮道路，男子背影走向朝陽。",
+          "src": "assets/stills/longnight-3.jpg"
+        }
+      ]
+    }
   },
   {
     "id": "streetlight",
@@ -137,7 +158,28 @@
     "poster": "assets/streetlight.jpg",
     "src": "media/streetlight-web.mp4",
     "youtubeId": "XOOsCvNIOyA",
-    "description": "把記憶寫進歌裡，讓一盞路燈照亮故事。AI 圖像與 Suno 音樂，中英字幕完整版。"
+    "description": "把記憶寫進歌裡，讓一盞路燈照亮故事。AI 圖像與 Suno 音樂，中英字幕完整版。",
+    "notes": {
+      "story": "一起長大的朋友，在熟悉的街角重逢。那些當年沒說出口的感情，留在自然的聊天與道別之間；結尾是接受彼此走向不同的人生。",
+      "craft": "以 AI 圖像搭配 Suno 生成的男女對唱，讓暖色街景、人物近景與兩人同行的畫面接續。從相見到揮手告別，保留完整歌曲與中英字幕。",
+      "stills": [
+        {
+          "time": "00:14",
+          "alt": "女子戴著奶油白圍巾，在亮起路燈的老街轉身。",
+          "src": "assets/stills/streetlight-1.jpg"
+        },
+        {
+          "time": "01:25",
+          "alt": "兩名年輕人沿著暖色路燈下的街道並肩微笑。",
+          "src": "assets/stills/streetlight-2.jpg"
+        },
+        {
+          "time": "02:10",
+          "alt": "男子在街口揮手，看著另一個身影走向遠處。",
+          "src": "assets/stills/streetlight-3.jpg"
+        }
+      ]
+    }
   },
   {
     "id": "community-white",

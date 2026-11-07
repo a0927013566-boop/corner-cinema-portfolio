@@ -1,0 +1,34 @@
+[
+  {
+    "width": 320,
+    "heroHeight": 620,
+    "gap": 0,
+    "captionClear": true,
+    "otherSectionsSameSize": true,
+    "playback": "not repeated"
+  },
+  {
+    "width": 390,
+    "heroHeight": 620,
+    "gap": 0,
+    "captionClear": true,
+    "otherSectionsSameSize": true,
+    "playback": "play/seek120/close/focus PASS"
+  },
+  {
+    "width": 768,
+    "heroHeight": 780,
+    "gap": 0,
+    "captionClear": true,
+    "otherSectionsSameSize": true,
+    "playback": "not repeated"
+  },
+  {
+    "width": 1440,
+    "heroHeight": 780,
+    "gap": 0,
+    "captionClear": true,
+    "otherSectionsSameSize": true,
+    "playback": "play/seek120/close/focus PASS"
+  }
+]

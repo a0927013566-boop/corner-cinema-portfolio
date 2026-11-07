@@ -1,5 +1,7 @@
 # 實際頁面證據
 
+最新逐區電影感整合：[研究與自查](../cinematic-direction.md)、[完整原速操作](cinematic/site-refinement.webm)、[桌面全頁](cinematic/page-desktop.png)、[手機寬度全頁](cinematic/page-mobile.png)、[證據manifest](cinematic/manifest.json)。下方為歷史證據，不代表本輪設計已被本人採用。
+
 2026-11-07（台北）。以下只包含本人已公開的網站、作品與操作，不含外部參考站素材。
 
 - [桌面入口](desktop-entry.jpg)、[MV 編排](desktop-films.jpg)、[照片敘事](desktop-photo.jpg)：Chromium 1440 × 1000。

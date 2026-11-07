@@ -1,0 +1,30 @@
+/* Shared timing and light connect the existing sections without taking over scrolling. */
+:root { --cinema-ease:cubic-bezier(.16,1,.3,1); }
+.header { background:#171a17f2; backdrop-filter:blur(14px); }
+.header::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:1px; background:linear-gradient(90deg,#b9a278,#e0c98d); transform:scaleX(var(--reading-progress,0)); transform-origin:left; pointer-events:none; }
+.header nav a { position:relative; border-color:transparent; transition:color .25s; }
+.header nav a::after { content:""; position:absolute; left:0; right:0; bottom:3px; height:1px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .45s var(--cinema-ease); }
+.header nav a:hover,.header nav a[aria-current=location] { color:var(--gold); border-color:transparent; }
+.header nav a:hover::after,.header nav a[aria-current=location]::after { transform:scaleX(1); }
+html[data-motion=running] .is-arriving { animation:cinema-arrive 1s var(--cinema-ease) both; }
+@keyframes cinema-arrive { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+.spatial-poster::before { inset:-2px; background:#233027; border:1px solid #74816b33; transform:translateZ(-6px); box-shadow:0 14px 28px -18px #12231880; }
+.poster-glaze { background:radial-gradient(ellipse at var(--light-x,30%) var(--light-y,0%),#e9e2cf28,transparent 65%); }
+.spatial-poster.is-tilted { transform:perspective(1300px) rotateX(var(--frame-x,0deg)) rotateY(var(--frame-y,0deg)) translateY(-4px); }
+.work-action { transition:color .3s,border-color .3s; }
+.player-dialog { border-color:#72776166; box-shadow:0 30px 110px #0009; border-radius:8px; }
+.close-player { border-radius:24px; }
+html[data-motion=running] .player-dialog {
+ opacity:0; transform:translateY(18px) scale(.985);
+ transition:opacity .24s ease,transform .4s var(--cinema-ease),display .24s allow-discrete,overlay .24s allow-discrete;
+}
+html[data-motion=running] .player-dialog[open] { opacity:1; transform:none; }
+html[data-motion=running] .player-dialog::backdrop { background:#050a0800; transition:background .3s,display .3s allow-discrete,overlay .3s allow-discrete; }
+html[data-motion=running] .player-dialog[open]::backdrop { background:#050a08e8; }
+@starting-style {
+ html[data-motion=running] .player-dialog[open] { opacity:0; transform:translateY(18px) scale(.985); }
+ html[data-motion=running] .player-dialog[open]::backdrop { background:#050a0800; }
+}
+html[data-motion=running] .listening-bar:not([hidden]) { animation:listening-arrive .55s var(--cinema-ease); }
+@keyframes listening-arrive { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+html[data-motion=paused] .header nav a,html[data-motion=paused] .header nav a::after,html[data-motion=paused] .work-action { transition:none; }

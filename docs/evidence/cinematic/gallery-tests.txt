@@ -1,0 +1,3 @@
+PASS normal: renderer, seven works, navigation, keyboard, drag, play, seek, close, preserved catalogue
+PASS reduced: renderer, seven works, navigation, keyboard, drag, play, seek, close, preserved catalogue
+PASS fallback: renderer, seven works, navigation, keyboard, drag, play, seek, close, preserved catalogue

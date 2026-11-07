@@ -1,0 +1,167 @@
+{
+  "url": "https://a0927013566-boop.github.io/corner-cinema-portfolio/",
+  "commit": "633c47136f5adf1ce9daa8b9bcc6b41bf9396602",
+  "checkedAt": "2026-11-07T02:20:36.205Z",
+  "files": [
+    {
+      "path": "spatial.css",
+      "sha256": "f1b68387cd45974311cd104bfeebd7256802d039f144bbf6184f9d805f42c274",
+      "status": 200
+    },
+    {
+      "path": "style.css",
+      "sha256": "e944dfa74baa26c15822fb3c51a0183d879d0839a0bc9a0a86cb5493d5522dfe",
+      "status": 200
+    },
+    {
+      "path": "film-gallery.css",
+      "sha256": "efe372f0782b5477cd1cae965694737b1374ab417125bb70278a02f6207b9c8e",
+      "status": 200
+    },
+    {
+      "path": "index.html",
+      "sha256": "ffb42ff9a73c502434490a5ee6f3899b6c4036acfe255fbe54e843afea217dcd",
+      "status": 200
+    },
+    {
+      "path": "lib/film-scene.js",
+      "sha256": "6cc1efaac404c461809f35397180bcc77b0c73c4c304f8515997c80c456ab8bb",
+      "status": 200
+    },
+    {
+      "path": "script.js",
+      "sha256": "a64a8b2563238229f1544b8908baec9775aac93d3bcaae0faf21a9ce6ae26c9b",
+      "status": 200
+    },
+    {
+      "path": "lib/film-gallery.js",
+      "sha256": "3536327832ab5fabf4fda787d3840d7b12f4be94cb827a9b01eed634313ba156",
+      "status": 200
+    },
+    {
+      "path": "lib/motion.js",
+      "sha256": "c971e85fcaaf09b483edda44d344bffcde8c975cdf10f91d8828329e33e0b7a4",
+      "status": 200
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "deba995d70cb3fc55706d1738bbbf8bdf4db9ff69bdeed4411f45000abaa5c46",
+      "status": 200
+    },
+    {
+      "path": "design-policy.json",
+      "sha256": "13dcb607649fb1ebad4d3bc57234a76291f28e1bac127df946e13782c3e5cfb6",
+      "status": 200
+    },
+    {
+      "path": "data/works.json",
+      "sha256": "bd1bb210040beb2ad00d15950584ee33e51f4ed58ab180d0b49000daabcf2689",
+      "status": 200
+    },
+    {
+      "path": "data/music.json",
+      "sha256": "a38c9dc8c478b39105f574918f14724f575b4e33458fc945a72566ca4b3f9ede",
+      "status": 200
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "fcc5cfce7ca178a5f2a9a6ec29dd57c4789f30abaa4454fc49dacad42fcc1868",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/checks.txt",
+      "sha256": "cf922e8107e007bb911eeb62aaac2fe836b73811ee8e81549f38be2d301b404e",
+      "status": 200
+    },
+    {
+      "path": "docs/spatial-design.md",
+      "sha256": "0bc1f72f1438f42754d2ad7da59fb45d3be81f398cc2e393aa7024f7a2e5af2a",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/manifest.json",
+      "sha256": "c48ee49e0d961ebeab81c090e1b491e2516d2c71c0a52687eb82abf578250f6a",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/final-mobile.png",
+      "sha256": "0bef88ec81e76f5b389ae0fcde7a031b92b25211a24b8027f28bfce3b9ea66b2",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/final-fallback.png",
+      "sha256": "147bf220c9b337d6a67e3c455b3accb816cf9374b832f192932dbb91fb5af9ed",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/final-desktop.png",
+      "sha256": "41e19dd87bd130f81ad38d9e82a1069e8c5bd06ab0336df635df37ae9fe3ff45",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/gallery-interaction.webm",
+      "sha256": "54b4a3b19d5d94581c7bfcc4e86fa93a0c4b0862b43e9f81cae4e2bcb07a1515",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/spatial.txt",
+      "sha256": "8c9210d47ee8d88e2fcbe3d265ee71c416273ee35ca2d7f1e38e6b55cd8a1869",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/smoke.txt",
+      "sha256": "642948df463151783d893e06145afca308ee5cba2a782d916bc2ac4d0ef2aa45",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/works-after.png",
+      "sha256": "0efe8bbeff47c7cf5fb0960d0d9c938bbe5348e5eba7b08d345cff98d969d425",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/page-overview.png",
+      "sha256": "fe856106198acea6d8b08a979c14b4acbd6c3fbea0fb8b40c841309d459c5336",
+      "status": 200
+    },
+    {
+      "path": "docs/evidence/visibility/works-before.png",
+      "sha256": "2031adc214afece3b490508224686f4cfb3939863996f4612e8305616fa504e5",
+      "status": 200
+    }
+  ],
+  "ui": [
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "overflow": false
+    }
+  ],
+  "media": [
+    {
+      "id": "longnight",
+      "currentTime": 45.020285,
+      "duration": 183.866667,
+      "paused": false
+    }
+  ],
+  "errors": [],
+  "effects": {
+    "renderer": "webgl",
+    "sevenWorks": 7,
+    "manualNavigation": true,
+    "liveNativePlayback": true,
+    "reducedMotionManualOptIn": true,
+    "heroImageUnchanged": true
+  }
+}

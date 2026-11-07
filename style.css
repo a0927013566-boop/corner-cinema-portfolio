@@ -587,38 +587,62 @@ em,i {
   color:#6c5021;
 }
 
-.group-mv .group-grid {
-  grid-template-columns:1fr;
-  gap:40px;
-}
-
-.group-mv .work-card {
+/* MV keeps the original paired images; detail enriches the same works. */
+.film-stills {
   display:grid;
-  grid-template-columns:1.65fr 1fr;
-  gap:40px;
-  align-items:center;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:24px;
 }
 
-.group-mv .work-topline {
-  margin-top:0;
+.film-stills figure {
+  margin:0;
+  min-width:0;
 }
 
-.group-mv .work-card:nth-child(even) {
-  grid-template-columns:1fr 1.65fr;
+.film-stills img {
+  aspect-ratio:16/9;
+  object-fit:contain;
+  background:var(--ink);
 }
 
-.group-mv .work-card:nth-child(even) .poster-link {
-  grid-column:2;
-  grid-row:1;
+.film-stills figcaption {
+  margin-top:4px;
+  color:var(--muted);
+  font-size:14px;
+  font-variant-numeric:tabular-nums;
 }
 
-.group-mv .work-card:nth-child(even) .work-copy {
-  grid-column:1;
-  grid-row:1;
+.film-notes {
+  margin-top:18px;
+  border-block:1px solid var(--line);
 }
 
-.group-mv h4 {
-  font-size:clamp(28px,3vw,44px);
+.film-notes summary {
+  cursor:pointer;
+  min-height:48px;
+  padding:12px 0;
+  font-size:16px;
+}
+
+.film-notes summary:hover {
+  color:#6c5021;
+}
+
+.film-notes>div {
+  padding:0 0 22px;
+}
+
+.film-notes h5 {
+  margin:18px 0 6px;
+  font-size:15px;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.film-notes p {
+  font-size:16px;
+  line-height:1.9;
 }
 
 .group-photo .group-grid {
@@ -1321,13 +1345,6 @@ em,i {
   .opening-index a {
     padding-left:16px;
   }
-  .group-mv .work-card,.group-mv .work-card:nth-child(even) {
-    gap:28px;
-    grid-template-columns:1.3fr 1fr;
-  }
-  .group-mv .work-card:nth-child(even) {
-    grid-template-columns:1fr 1.3fr;
-  }
   .music-layout {
     gap:40px;
   }
@@ -1443,12 +1460,7 @@ em,i {
   .work-card h4 {
     font-size:27px;
   }
-  .group-mv .work-card,.group-mv .work-card:nth-child(even) {
-    display:block;
-  }
-  .group-mv .work-copy {
-    padding-top:18px;
-  }
+  .group-mv .group-grid,
   .group-photo .group-grid {
     grid-template-columns:1fr;
   }

@@ -1,0 +1,42 @@
+[
+  {
+    "width": 320,
+    "overflow": false,
+    "nav": "PASS",
+    "targetHeight": ">=44",
+    "focus": {
+      "outline": "rgb(217, 189, 131)",
+      "href": "#works"
+    }
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "nav": "PASS",
+    "targetHeight": ">=44",
+    "focus": {
+      "outline": "rgb(217, 189, 131)",
+      "href": "#works"
+    }
+  },
+  {
+    "width": 768,
+    "overflow": false,
+    "nav": "PASS",
+    "targetHeight": ">=44",
+    "focus": {
+      "outline": "rgb(217, 189, 131)",
+      "href": "#works"
+    }
+  },
+  {
+    "width": 1440,
+    "overflow": false,
+    "nav": "PASS",
+    "targetHeight": ">=44",
+    "focus": {
+      "outline": "rgb(217, 189, 131)",
+      "href": "#works"
+    }
+  }
+]

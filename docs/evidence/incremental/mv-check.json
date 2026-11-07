@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "overflow": false,
+      "keyboardDetails": "PASS",
+      "filters": "PASS",
+      "playback": "not repeated"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "keyboardDetails": "PASS",
+      "filters": "PASS",
+      "playback": "2 MV play/seek90/close/focus, audio mutual exclusion PASS"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "keyboardDetails": "PASS",
+      "filters": "PASS",
+      "playback": "not repeated"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "keyboardDetails": "PASS",
+      "filters": "PASS",
+      "playback": "2 MV play/seek90/close/focus, audio mutual exclusion PASS"
+    }
+  ],
+  "staticAnd503": "PASS",
+  "existingWorkDataAndOtherHTML": "unchanged"
+}

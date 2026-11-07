@@ -12,8 +12,8 @@
 .sound-sculpture canvas { width:100%; height:100%; display:block; opacity:0; transition:opacity 1s; }
 .sound-sculpture[data-ready=true] canvas { opacity:1; }
 .sound-sculpture[data-ready=true] .sound-fallback { opacity:0; }
-.sound-fallback { display:flex; align-items:center; justify-content:center; gap:1%; width:88%; height:72%; position:absolute; top:14%; left:8%; transform:perspective(800px) rotateY(-23deg) rotateZ(-14deg); transition:opacity .5s; }
-.sound-fallback i { width:1.2%; height:calc(8% + var(--peak,.5)*58%); background:linear-gradient(90deg,#8f7048,#ebd9aa 55%,#c3a36b 65%,#584d38); box-shadow:4px 8px 14px #0005; border-radius:2px; }
+.sound-fallback { position:absolute; inset:16% 8%; display:grid; place-items:center; perspective:1000px; transition:opacity .5s; }
+.sound-fallback img { width:100%; height:auto; transform:rotateY(-12deg) rotateX(5deg); border:6px solid #343a35; box-shadow:12px 20px 45px #0008; }
 .sound-orbit-label { position:absolute; bottom:159px; right:4%; font-size:11px; letter-spacing:.22em; color:#b5bcaf; text-align:right; }
 .sound-orbit-label span { display:block; font-size:13px; letter-spacing:.07em; margin-top:6px; }
 .motion-toggle { position:absolute; z-index:3; right:0; top:36px; display:flex; align-items:center; gap:12px; background:transparent; border:1px solid #7f8875; color:var(--paper); padding:8px 14px; min-height:44px; font-size:13px; }

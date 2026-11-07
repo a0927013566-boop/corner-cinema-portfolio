@@ -40,7 +40,7 @@
 
 ## 動態與立體聆聽
 
-最新設計計畫／驗證見 [spatial-design.md](docs/spatial-design.md)。`spatial.css` 管聆聽室與後續空間設計，`lib/sound-sculpture.js` 是實際3D幾何、相機和燈光；`lib/sound-experience.js` 接既有播放器的頻譜，`lib/motion.js` 共用減少動態／暫停。Three.js r180 在 `vendor/three/` 本地託管，含MIT授權，首頁不預載3D。
+最新設計計畫／驗證見 [spatial-design.md](docs/spatial-design.md)。`spatial.css` 管聆聽室與後續空間設計，`lib/artwork-stage.js` 是原作品的實際3D展示面、相機和燈光；`lib/sound-experience.js` 接既有播放器的頻譜，`lib/motion.js` 共用減少動態／暫停。Three.js r180 在 `vendor/three/` 本地託管，含MIT授權，首頁不預載3D。
 
 `python3 scripts/build-waveforms.py`（需ffmpeg）從已授權MP3重建每首64個RMS振幅，再執行 `node scripts/build-catalog.mjs` 同步靜態HTML。換曲資料保留原來源，不以波形取代音訊。
 

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "source": "使用者 2026-11-07：一步步優化原設計，禁止整站改掉；將禁止與必做事項寫入設定",
   "mode": "incremental_preserve_existing_design",
   "visualComparisonBaseline": "258d714936de23ff6684a54af71d80b16df3d500",
@@ -11,6 +11,10 @@
     {
       "commit": "f8afbf094048514e00822de4d76eebd49fed142c",
       "reason": "使用者認為改善幅度不足、音樂區已明確否決；要求真正動態、立體、美觀與質感"
+    },
+    {
+      "commit": "f977931c084c2f757e45dfa85e9be10bf6fe10df",
+      "reason": "本人再否決新增金色板片：變醜、缺乏質感與立體動態參考依據；原首頁畫面並未否決"
     }
   ],
   "maxDesignModulesPerStep": 1,
@@ -52,6 +56,9 @@
     "replaceRejectedMusic": true,
     "real3DRequested": true,
     "smallTweaksAreNotCompletion": true,
-    "retainContentPlaybackAndIdentity": true
+    "retainContentPlaybackAndIdentity": true,
+    "preserveOriginalImagesAndComposition": true,
+    "rejectGoldFinSculpture": true,
+    "researchActualImmersive3DWebsitesBeforeFurtherEffects": true
   }
 }

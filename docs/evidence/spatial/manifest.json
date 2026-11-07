@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-07",
+  "scope": "Actual local browser screenshots and normal-speed silent interaction recordings; not user design acceptance or real-device Safari verification",
+  "files": [
+    {
+      "path": "docs/evidence/spatial/collection-desktop.png",
+      "bytes": 296985,
+      "sha256": "ca6e62c592a196c27c5587909545fa21a45418bcf2e1ba3b2d8f3c81e7769a5b"
+    },
+    {
+      "path": "docs/evidence/spatial/full-overview.png",
+      "bytes": 1702725,
+      "sha256": "ac402f04b57c97ede89dd5ce6fdba658ce1f9af3e80a2f037e5ce2b12c000c82"
+    },
+    {
+      "path": "docs/evidence/spatial/gallery-motion.webm",
+      "bytes": 1304402,
+      "sha256": "4b221af9412b234ef6298e272d29e2837b11192e2ae7f982a782c674f1a9be92",
+      "duration_seconds": 9.0
+    },
+    {
+      "path": "docs/evidence/spatial/hero-before.png",
+      "bytes": 1057624,
+      "sha256": "d07816b7b0a022ceb22cd48a2e7db44808b6fd8b061ae0bfaf4ef308a77b602d"
+    },
+    {
+      "path": "docs/evidence/spatial/hero-motion-desktop.png",
+      "bytes": 1020846,
+      "sha256": "71d34c4e79850f62ca2d8bad89a448cc5339fac5ebe8b87b9c2ac39c495e203c"
+    },
+    {
+      "path": "docs/evidence/spatial/hero-motion-mobile.png",
+      "bytes": 276580,
+      "sha256": "be93390c388e8f5a98add39a07eaa023a4367bd77efadab4235221c606c0ad47"
+    },
+    {
+      "path": "docs/evidence/spatial/hero-motion.webm",
+      "bytes": 1804265,
+      "sha256": "bce67f818445edaa81ca1022a8b94de7738acde9513b42641dc901a14cffe66e",
+      "duration_seconds": 16.44
+    },
+    {
+      "path": "docs/evidence/spatial/music-artwork-desktop.png",
+      "bytes": 434637,
+      "sha256": "e65506cdc24ee1a25323b3b493e055372888e0440d6db03097c7766c66a8aa01"
+    },
+    {
+      "path": "docs/evidence/spatial/music-artwork-mobile.png",
+      "bytes": 159356,
+      "sha256": "dd9ac094b9cb528f2835c6bd1c8bc11883491f7ee6ebd4a6b72c092206d0de41"
+    },
+    {
+      "path": "docs/evidence/spatial/music-before.png",
+      "bytes": 149277,
+      "sha256": "467adaf2a42a60818bd3789128bda96c130c426c52a453b8bdb604a5455713c9"
+    },
+    {
+      "path": "docs/evidence/spatial/music-motion.webm",
+      "bytes": 1724100,
+      "sha256": "18b84192fa952f993f443363b0a1bafeb8855520048baf5f22d942fb91c50f85",
+      "duration_seconds": 16.0
+    },
+    {
+      "path": "docs/evidence/spatial/smoke.txt",
+      "bytes": 428,
+      "sha256": "642948df463151783d893e06145afca308ee5cba2a782d916bc2ac4d0ef2aa45"
+    },
+    {
+      "path": "docs/evidence/spatial/spatial-tests.txt",
+      "bytes": 97,
+      "sha256": "8c9210d47ee8d88e2fcbe3d265ee71c416273ee35ca2d7f1e38e6b55cd8a1869"
+    },
+    {
+      "path": "docs/evidence/spatial/works-before.png",
+      "bytes": 530563,
+      "sha256": "e383534c1d07998c5c779f313725c2df7e271a23ef487c5297e5b5b234da270e"
+    },
+    {
+      "path": "docs/evidence/spatial/works-motion-desktop.png",
+      "bytes": 550979,
+      "sha256": "92debafc03015ea431e8279298a9c8f36c67f39696e5e99256f52228a6d1b399"
+    },
+    {
+      "path": "docs/evidence/spatial/works-motion-mobile.png",
+      "bytes": 225416,
+      "sha256": "7199b8b989bd0a9f4910fcb8a779d0177b5b6f7b1854a56f56e3f1e8ea240891"
+    }
+  ]
+}

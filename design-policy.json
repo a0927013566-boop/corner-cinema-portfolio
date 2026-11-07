@@ -59,6 +59,14 @@
     "retainContentPlaybackAndIdentity": true,
     "preserveOriginalImagesAndComposition": true,
     "rejectGoldFinSculpture": true,
-    "researchActualImmersive3DWebsitesBeforeFurtherEffects": true
+    "researchActualImmersive3DWebsitesBeforeFurtherEffects": true,
+    "implementationStatus": "implementation_verified_locally",
+    "implementedEffects": [
+      "original_photo_depth_and_lens_light_2_5d",
+      "original_work_css_3d_frames",
+      "original_music_film_on_real_3d_display",
+      "actual_audio_frequency_response"
+    ],
+    "userDesignAcceptance": "not_received_for_revised_version"
   }
 }

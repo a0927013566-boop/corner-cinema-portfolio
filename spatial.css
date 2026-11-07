@@ -13,7 +13,7 @@
 .sound-sculpture[data-ready=true] canvas { opacity:1; }
 .sound-sculpture[data-ready=true] .sound-fallback { opacity:0; }
 .sound-fallback { position:absolute; inset:16% 8%; display:grid; place-items:center; perspective:1000px; transition:opacity .5s; }
-.sound-fallback img { width:100%; height:auto; transform:rotateY(-12deg) rotateX(5deg); border:6px solid #343a35; box-shadow:12px 20px 45px #0008; }
+.sound-fallback img { width:100%; height:100%; object-fit:contain; transform:rotateY(-12deg) rotateX(5deg); filter:drop-shadow(12px 20px 18px #0008); }
 .sound-orbit-label { position:absolute; bottom:159px; right:4%; font-size:11px; letter-spacing:.22em; color:#b5bcaf; text-align:right; }
 .sound-orbit-label span { display:block; font-size:13px; letter-spacing:.07em; margin-top:6px; }
 .motion-toggle { position:absolute; z-index:3; right:0; top:36px; display:flex; align-items:center; gap:12px; background:transparent; border:1px solid #7f8875; color:var(--paper); padding:8px 14px; min-height:44px; font-size:13px; }
@@ -98,3 +98,18 @@ html[data-motion=running] .hero:not([data-intro=done]) .hero-content>.button { a
 @keyframes scene-enter { from { opacity:0; transform:translateY(24px); filter:blur(5px); } to { opacity:1; transform:translateY(0); filter:blur(0); } }
 @media(max-width:600px){ .hero-motion { top:12px; right:16px; font-size:11px; min-height:38px; } }
 @media(prefers-reduced-motion:reduce){ .hero-content>* { animation:none!important; } }
+/* Gallery effects add depth to the existing images without changing their order or layout. */
+.spatial-poster { overflow:visible; transform-style:preserve-3d; transform:perspective(1100px) rotateX(0) rotateY(0); transition:transform .45s cubic-bezier(.2,.7,.2,1); }
+.spatial-poster::before { content:""; position:absolute; inset:-3px; background:linear-gradient(145deg,#73776a,#222d26 35%,#818273 65%,#29362b); transform:translateZ(-9px); box-shadow:0 15px 28px -15px #14211980; border-radius:2px; transition:box-shadow .4s; }
+.spatial-poster img,.spatial-poster:hover img { display:block; width:100%; transform:translateZ(0); }
+.spatial-poster::after { transform:translateZ(1px); }
+.poster-glaze { position:absolute; inset:0; z-index:2; pointer-events:none; transform:translateZ(2px); border:1px solid #ffffff30; background:radial-gradient(ellipse at var(--light-x,30%) var(--light-y,0%),#fff2,transparent 65%); opacity:0; transition:opacity .3s; }
+.spatial-poster .play-circle,.spatial-poster .poster-meta { transform:translateZ(18px); z-index:3; }
+.spatial-poster.is-tilted { transform:perspective(1100px) rotateX(var(--frame-x,0deg)) rotateY(var(--frame-y,0deg)) translateY(-6px); transition:transform .14s ease-out; }
+.spatial-poster.is-tilted::before { box-shadow:0 28px 36px -16px #14211980; }
+.spatial-poster.is-tilted .poster-glaze,.spatial-poster:focus-visible .poster-glaze { opacity:1; }
+html[data-motion=running] .work-card.is-entering .spatial-poster { animation:frame-arrive .95s cubic-bezier(.16,1,.3,1) both; }
+html[data-motion=running] .work-card.is-entering .work-copy { animation:scene-enter .9s .12s cubic-bezier(.16,1,.3,1) both; }
+@keyframes frame-arrive { from { opacity:.2; transform:perspective(1100px) translateY(36px) rotateX(7deg) scale(.97); } to { opacity:1; transform:perspective(1100px) translateY(0) rotateX(0) scale(1); } }
+@media(prefers-reduced-motion:reduce){ .spatial-poster,.poster-glaze,.spatial-poster::before { transition:none; } .work-card>* { animation:none!important; } }
+html[data-motion=paused] .spatial-poster { transform:none; transition:none; }

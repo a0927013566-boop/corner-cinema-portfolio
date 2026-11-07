@@ -84,7 +84,7 @@
  .track { padding:18px 14px; min-height:133px; grid-template-columns:21px minmax(0,1fr) auto; gap:8px 10px; }
  .track-title { font-size:21px; }
 }
-@media(prefers-reduced-motion:reduce) { .track,.sound-play>span,.sound-sculpture canvas { transition:none; } }
+
 html[data-motion=paused] .track,html[data-motion=paused] .sound-play>span { transition:none; transform:none; }
 /* Original hero photograph and layout are retained. The extra layer supplies depth/light only. */
 .scene-canvas { position:absolute; inset:0; width:100%; height:100%; z-index:-3; pointer-events:none; }
@@ -97,7 +97,7 @@ html[data-motion=running] .hero:not([data-intro=done]) .hero-copy { animation:sc
 html[data-motion=running] .hero:not([data-intro=done]) .hero-content>.button { animation:scene-enter 1.1s .26s cubic-bezier(.16,1,.3,1) both; }
 @keyframes scene-enter { from { opacity:0; transform:translateY(24px); filter:blur(5px); } to { opacity:1; transform:translateY(0); filter:blur(0); } }
 @media(max-width:600px){ .hero-motion { top:12px; right:16px; font-size:11px; min-height:38px; } }
-@media(prefers-reduced-motion:reduce){ .hero-content>* { animation:none!important; } }
+
 /* Gallery effects add depth to the existing images without changing their order or layout. */
 .spatial-poster { overflow:visible; transform-style:preserve-3d; transform:perspective(1100px) rotateX(0) rotateY(0); transition:transform .45s cubic-bezier(.2,.7,.2,1); }
 .spatial-poster::before { content:""; position:absolute; inset:-3px; background:linear-gradient(145deg,#73776a,#222d26 35%,#818273 65%,#29362b); transform:translateZ(-9px); box-shadow:0 15px 28px -15px #14211980; border-radius:2px; transition:box-shadow .4s; }
@@ -111,5 +111,9 @@ html[data-motion=running] .hero:not([data-intro=done]) .hero-content>.button { a
 html[data-motion=running] .work-card.is-entering .spatial-poster { animation:frame-arrive .95s cubic-bezier(.16,1,.3,1) both; }
 html[data-motion=running] .work-card.is-entering .work-copy { animation:scene-enter .9s .12s cubic-bezier(.16,1,.3,1) both; }
 @keyframes frame-arrive { from { opacity:.2; transform:perspective(1100px) translateY(36px) rotateX(7deg) scale(.97); } to { opacity:1; transform:perspective(1100px) translateY(0) rotateX(0) scale(1); } }
-@media(prefers-reduced-motion:reduce){ .spatial-poster,.poster-glaze,.spatial-poster::before { transition:none; } .work-card>* { animation:none!important; } }
+
 html[data-motion=paused] .spatial-poster { transform:none; transition:none; }
+
+html[data-motion=running] .sound-sculpture:not([data-ready=true]) .sound-fallback img { animation:projection-drift 10s ease-in-out infinite alternate; }
+@keyframes projection-drift { from { transform:perspective(900px) rotateY(-20deg) rotateX(5deg) translateY(0); } to { transform:perspective(900px) rotateY(15deg) rotateX(-3deg) translateY(-12px); } }
+html[data-motion=paused] .sound-fallback img { animation:none; }

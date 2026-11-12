@@ -33,7 +33,9 @@ const tracks=JSON.parse(fs.readFileSync('data/music.json'));
  }
  await page.locator('.poster-link[data-play="qiuguang"]').click();assert.equal(await page.locator('[data-episode]').count(),17);
  await page.locator('[data-episode="16"]').click();assert((await page.locator('iframe').getAttribute('src')).includes('iVBZpIGpQ0U'));assert(await page.locator('#next-episode').isHidden());await closeFilm();
- await page.locator('.poster-link[data-play="changye"]').click();assert.equal(await page.locator('[data-episode]').count(),2);await page.locator('#next-episode').click();assert((await page.locator('iframe').getAttribute('src')).includes('nFohx8ILt2Y'));await closeFilm();
+ const CY=WORKS.find(w=>w.id==='changye').episodes;await page.locator('.poster-link[data-play="changye"]').click();assert.equal(await page.locator('[data-episode]').count(),CY.length);assert.equal((await page.locator('[data-episode="0"]').textContent()).startsWith('第 1 集・上'),true);if(CY.length>4)assert.equal((await page.locator('[data-episode="4"]').textContent()).startsWith('第 3 集・上'),true);await page.locator('#next-episode').click();assert((await page.locator('iframe').getAttribute('src')).includes(CY[1].youtubeId));await closeFilm();
+ // 再點開同一部：接著上次看到的那一集
+ await page.locator('.poster-link[data-play="changye"]').click();assert((await page.locator('iframe').getAttribute('src')).includes(CY[1].youtubeId));assert.equal(await page.locator('[data-episode="1"]').getAttribute('aria-pressed'),'true');await closeFilm();
  await page.locator('[data-music-filter="all"]').click();assert.equal(await page.locator('.track').count(),41);
  await page.locator('#music-search').fill('完全不存在的曲名');assert.equal(await page.locator('.track').count(),0);assert(await page.locator('#play-queue').isDisabled());await page.locator('#music-search').fill('');
  for(const track of tracks){

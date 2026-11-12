@@ -25,6 +25,12 @@ const gl=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'
   await p.locator('[data-world=play]').click();
   await p.waitForFunction(()=>{const v=document.querySelector('#player-stage video');return v&&v.currentTime>0;});
   await p.locator('.close-player').click();
+  // 多集作品在放映廳只放第一支影片、不出選集；作品位置才有選集
+  await p.locator('[data-world=rail] button').nth(1).click();await p.waitForFunction(()=>document.querySelector('#world').dataset.current==='changye');
+  await p.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.world-hud')).getPropertyValue('--world-focus'))>.9);
+  await p.locator('[data-world=play]').click();await p.waitForSelector('dialog[open] iframe');
+  assert((await p.locator('dialog iframe').getAttribute('src')).includes(WORKS.find(x=>x.id==='changye').episodes[0].youtubeId));
+  assert.equal(await p.locator('#episode-picker').isHidden(),true);assert.equal(await p.locator('#next-episode').isHidden(),true);await p.locator('.close-player').click();
   assert.equal(await p.locator('.work-card').count(),N);
   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   assert.deepEqual(errors,[]);console.log(`PASS world ${size.width}: webgl, ${SHOWN+SHOWN_HALLS} stops, rail, prev/next, keyboard, disclosure, play, close, catalogue kept`);await p.close();

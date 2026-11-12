@@ -70,7 +70,10 @@ for (const [key, value, say] of [['off', 'off', '下架了（作品清單還在�
 }
 if (arg.remove) {
   const i = works.indexOf(find(arg.remove));
-  const [gone] = works.splice(i, 1); save();
+  const [gone] = works.splice(i, 1);
+  // 記下來，盯頻道的程式才不會隔天又把它加回來
+  try { const file = at('data', 'channel.json'), c = JSON.parse(fs.readFileSync(file, 'utf8')); c.skip = [...new Set([...(c.skip || []), gone.youtubeId, ...(gone.episodes || []).map(e => e.youtubeId)].filter(Boolean))]; if (!arg.dry) fs.writeFileSync(file, JSON.stringify(c, null, 2) + '\n'); } catch {}
+  save();
   report([`拿掉了：${gone.title}（${gone.label}）`, `封面與影片檔沒有刪，還在 ${gone.poster}${gone.src ? '、' + gone.src : ''}`]); process.exit(0);
 }
 

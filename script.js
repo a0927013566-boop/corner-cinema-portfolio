@@ -1,13 +1,13 @@
 import {initSiteFlow} from './lib/site-flow.js?v=cinematic-1';
 initSiteFlow();
-import {external, workMarkup, trackMarkup, episodeDuration} from './lib/catalog.mjs';
+import {external, workMarkup, trackMarkup, episodeDuration, hallSelection} from './lib/catalog.mjs';
 import {createListeningPlayer} from './lib/listening.js';
 import {initSoundExperience, setSoundTrack} from './lib/sound-experience.js?v=cinematic-1';
 initSoundExperience();
 import {initSceneMotion} from './lib/scene-motion.js?v=cinematic-1';
 import {initFilmGallery} from './lib/film-gallery.js?v=cinematic-1';
 import {initGalleryMotion} from './lib/gallery-motion.js?v=cinematic-1';
-import {initWorld} from './lib/world.js?v=world-4';
+import {initWorld} from './lib/world.js?v=world-5';
 initSceneMotion();
 initGalleryMotion();
 (() => {
@@ -210,7 +210,7 @@ initGalleryMotion();
   });
   async function getJSON(url) { const r = await fetch(url); if(!r.ok) throw new Error('Could not load content'); const data = await r.json(); if (!Array.isArray(data)) throw new Error('Invalid content list'); return data; }
   Promise.allSettled([getJSON('data/works.json'),getJSON('data/music.json')]).then(([films,music]) => {
-    if (films.status === 'fulfilled') { works = films.value; renderWorks(); initWorld(works).catch(()=>false).then(on=>{ if(!on) initFilmGallery(works); }); document.addEventListener('corner:world-lost',()=>initFilmGallery(works),{once:true}); $('#work-filters').hidden = false; }
+    if (films.status === 'fulfilled') { works = films.value; renderWorks(); const screening = hallSelection(works, document.querySelector('#world')?.dataset.capacity).shown; initWorld(screening).catch(()=>false).then(on=>{ if(!on) initFilmGallery(screening); }); document.addEventListener('corner:world-lost',()=>initFilmGallery(hallSelection(works, document.querySelector('#world')?.dataset.capacity).shown),{once:true}); $('#work-filters').hidden = false; }
     else $('#works-status').textContent = '互動清單未載入，仍可點作品直接觀看。';
     if (music.status === 'fulfilled') { tracks = music.value; renderTracks(); $('#music-filters').hidden = false; $('.search-label').hidden = false; $('#play-queue').hidden = false; }
     else $('#music-status').textContent = '互動清單未載入，仍可直接開啟音樂。';

@@ -18,7 +18,8 @@
         "youtubeId": "nFohx8ILt2Y",
         "duration": "PT1M1S"
       }
-    ]
+    ],
+    "added": "2026-11-07"
   },
   {
     "id": "qiuguang",
@@ -114,7 +115,8 @@
         "youtubeId": "iVBZpIGpQ0U",
         "duration": "PT1M37S"
       }
-    ]
+    ],
+    "added": "2026-11-07"
   },
   {
     "id": "longnight",
@@ -146,7 +148,8 @@
           "src": "assets/stills/longnight-3.jpg"
         }
       ]
-    }
+    },
+    "added": "2026-11-07"
   },
   {
     "id": "streetlight",
@@ -179,7 +182,8 @@
           "src": "assets/stills/streetlight-3.jpg"
         }
       ]
-    }
+    },
+    "added": "2026-11-07"
   },
   {
     "id": "community-white",
@@ -191,7 +195,8 @@
     "poster": "assets/community-white.jpg",
     "src": "media/community-white-web.mp4",
     "description": "十四張照片，配上 Morning Classroom，以乾淨白框記錄一堂手機課的片刻。",
-    "disclosure": "AI 生成的虛構活動示範，並非真實客戶案例。"
+    "disclosure": "AI 生成的虛構活動示範，並非真實客戶案例。",
+    "added": "2026-11-07"
   },
   {
     "id": "community-paper",
@@ -203,7 +208,8 @@
     "poster": "assets/community-paper.jpg",
     "src": "media/community-paper-web.mp4",
     "description": "同一組照片，換成剪貼紙底與 Weekend Lane 配樂，呈現另一種回顧的節奏。",
-    "disclosure": "AI 生成的虛構活動示範，並非真實客戶案例。"
+    "disclosure": "AI 生成的虛構活動示範，並非真實客戶案例。",
+    "added": "2026-11-07"
   },
   {
     "id": "wedding",
@@ -215,7 +221,8 @@
     "poster": "assets/wedding.jpg",
     "src": "media/wedding-web.mp4",
     "description": "從求婚到婚禮當晚，以十六張照片與 Under the Lamp 配樂，編排一段婚禮回顧。",
-    "disclosure": "人物、人名與日期均為 AI 虛構示範，並非真實婚禮或客戶案例。"
+    "disclosure": "人物、人名與日期均為 AI 虛構示範，並非真實婚禮或客戶案例。",
+    "added": "2026-11-07"
   },
   {
     "id": "code-opening",
@@ -226,7 +233,8 @@
     "label": "程式動畫",
     "poster": "assets/code-opening.jpg",
     "youtubeId": "eX1a-BVPejA",
-    "description": "頻道每支影片開場用的片頭。圖形、字和節奏都由程式一格一格算出來，沒有用生成影片。"
+    "description": "頻道每支影片開場用的片頭。圖形、字和節奏都由程式一格一格算出來，沒有用生成影片。",
+    "added": "2026-11-12"
   },
   {
     "id": "code-qinghe",
@@ -238,7 +246,8 @@
     "poster": "assets/code-qinghe.jpg",
     "youtubeId": "pXPQe2VMTZU",
     "description": "把一間公司的年份與里程碑排成一段看得懂的時間線。",
-    "disclosure": "公司為虛構，示範用，並非真實客戶案例。"
+    "disclosure": "公司為虛構，示範用，並非真實客戶案例。",
+    "added": "2026-11-12"
   },
   {
     "id": "code-chaolan",
@@ -250,7 +259,8 @@
     "poster": "assets/code-chaolan.jpg",
     "youtubeId": "Rb09GyVQjVw",
     "description": "讓品牌標誌動起來的短片，可以放在影片開頭或店面螢幕。",
-    "disclosure": "虛構品牌，示範用，並非真實客戶案例。"
+    "disclosure": "虛構品牌，示範用，並非真實客戶案例。",
+    "added": "2026-11-12"
   },
   {
     "id": "code-photo-promo",
@@ -262,6 +272,7 @@
     "poster": "assets/code-photo-promo.jpg",
     "youtubeId": "qsD_3le4BzU",
     "description": "介紹照片回顧服務的直式短片，給手機看的比例。",
-    "disclosure": "畫面裡的照片是程式畫的插畫，並非真實照片。"
+    "disclosure": "畫面裡的照片是程式畫的插畫，並非真實照片。",
+    "added": "2026-11-12"
   }
 ]

@@ -14,4 +14,5 @@ const filters = `<button type="button" data-filter="all" aria-pressed="true">全
 const index = fs.readFileSync(indexURL, 'utf8')
   .replace(/<!-- WORKS:START -->[\s\S]*?<!-- WORKS:END -->/, `<!-- WORKS:START -->${workMarkup(works)}<!-- WORKS:END -->`)
   .replace(/<!-- TRACKS:START -->[\s\S]*?<!-- TRACKS:END -->/, `<!-- TRACKS:START -->${trackMarkup(tracks.filter(t => t.group === 'song'))}<!-- TRACKS:END -->`);
-fs.writeFileSync(indexURL, index.replace(/(<div class="filters" id="work-filters"[^>]*>)[\s\S]*?(<\/div>)/, `$1${filters}$2`));
+let capacity = 12; try { capacity = JSON.parse(fs.readFileSync(new URL('../data/hall.json',import.meta.url))).capacity || 12; } catch {}
+fs.writeFileSync(indexURL, index.replace(/(<section class="world" id="world")( data-capacity="\d+")?/, `$1 data-capacity="${capacity}"`).replace(/(<div class="filters" id="work-filters"[^>]*>)[\s\S]*?(<\/div>)/, `$1${filters}$2`));

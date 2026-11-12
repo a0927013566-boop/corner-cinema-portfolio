@@ -6,7 +6,14 @@
 //   node scripts/add-work.mjs --youtube <連結> --加到 changye            （影集加一集，不多一面銀幕）
 //   node scripts/add-work.mjs --影片檔 路徑.mp4 --廳 照片敘事 --片名 "某某"
 //   node scripts/add-work.mjs --youtube <連結> --廳 動畫短片 --廳標語 "新的一廳。"   （沒有的廳會自己開一個）
-//   node scripts/add-work.mjs --拿掉 <作品代號>
+//   node scripts/add-work.mjs --拿掉 <作品代號>                         （整部從網站拿掉）
+//
+// 放映廳（走道）另外管，作品清單永遠放全部：
+//   --下架 <代號>     不進放映廳，作品清單照留          --上架 <代號>       放回去
+//   --固定 <代號>     經典作品，不會被新片擠出去        --取消固定 <代號>
+//   --容量 <數字>     放映廳最多幾面銀幕（現在的數字在 data/hall.json）
+//   --看放映廳        列出現在誰在廳裡、誰被擠出去、誰下架、誰固定
+// 滿了的時候，最舊的先出去；影集每加一集就算最新，所以一直在更新的影集會留著。
 //
 // 其他可加：--副標 --標註（虛構品牌、AI 示範這類要寫給訪客看的話）--封面 圖檔 --代號 英文代號 --放在 前面|後面 --試跑
 // 沒給片名會用 YouTube 上的標題；沒給封面會抓 YouTube 的封面，影片檔則用 ffmpeg 取一格。
@@ -14,13 +21,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {hallsFor} from '../lib/catalog.mjs';
+import {hallsFor, hallSelection} from '../lib/catalog.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const at = (...p) => path.join(root, ...p);
 const stop = message => { console.error('沒加：' + message); process.exit(1); };
 
-const names = {'廳':'hall','片名':'title','副標':'subtitle','說明':'description','片長':'duration','標註':'disclosure','封面':'poster','代號':'id','加到':'series','集名':'episode','影片檔':'file','廳標語':'hallLine','廳說明':'hallNote','放在':'place','拿掉':'remove','試跑':'dry'};
+const names = {'廳':'hall','片名':'title','副標':'subtitle','說明':'description','片長':'duration','標註':'disclosure','封面':'poster','代號':'id','加到':'series','集名':'episode','影片檔':'file','廳標語':'hallLine','廳說明':'hallNote','放在':'place','拿掉':'remove','試跑':'dry','下架':'off','上架':'on','固定':'pin','取消固定':'unpin','容量':'capacity','看放映廳':'show'};
 const arg = {};
 for (let i = 2; i < process.argv.length; i++) {
   const raw = process.argv[i]; if (!raw.startsWith('--')) stop(`看不懂「${raw}」`);
@@ -31,10 +38,38 @@ for (let i = 2; i < process.argv.length; i++) {
 const worksPath = at('data', 'works.json');
 const works = JSON.parse(fs.readFileSync(worksPath, 'utf8'));
 const save = () => { if (arg.dry) return; fs.writeFileSync(worksPath, JSON.stringify(works, null, 2) + '\n'); execFileSync(process.execPath, [at('scripts', 'build-catalog.mjs')], {stdio: 'inherit'}); };
+const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10); // 台灣日期
+const hallPath = at('data', 'hall.json');
+const capacityNow = () => { try { return JSON.parse(fs.readFileSync(hallPath, 'utf8')).capacity || 12; } catch { return 12; } };
+const names_ = list => list.length ? list.map(w => w.title).join('、') : '沒有';
+function hallLines(before) {
+  const now = hallSelection(works, capacityNow());
+  const lines = [`放映廳現在 ${now.shown.length} 面銀幕（最多 ${now.capacity}）：${names_(now.shown)}`];
+  if (now.pinned.length) lines.push(`固定：${names_(now.pinned)}`);
+  if (now.pushed.length) lines.push(`被擠出放映廳、作品清單還在：${names_(now.pushed)}`);
+  if (now.off.length) lines.push(`下架、作品清單還在：${names_(now.off)}`);
+  if (before) { const out = before.filter(w => !now.shown.includes(w) && works.includes(w) && w.hall !== 'off'); if (out.length) lines.unshift(`這次被擠出放映廳的：${names_(out)}`); }
+  if (now.pinned.length > now.capacity) lines.push(`固定的比容量還多，超過的 ${now.pinned.length - now.capacity} 部還是會顯示；要嘛加大容量，要嘛取消幾部固定`);
+  return lines;
+}
+const find = key => works.find(w => w.id === key || w.title === key) || stop(`找不到「${key}」。現有：${works.map(w => `${w.id}（${w.title}）`).join('、')}`);
 const report = lines => console.log((arg.dry ? '【試跑，沒有寫入】\n' : '') + lines.join('\n'));
 
+if (arg.show) { report(hallLines()); process.exit(0); }
+if (arg.capacity) {
+  const n = Number(arg.capacity); if (!Number.isInteger(n) || n < 1 || n > 40) stop('容量要是 1 到 40 的整數');
+  const before = hallSelection(works, capacityNow()).shown;
+  if (!arg.dry) fs.writeFileSync(hallPath, JSON.stringify({capacity: n}, null, 2) + '\n'); save();
+  report(arg.dry ? [`容量會改成 ${n}`] : [`放映廳容量改成 ${n}`, ...hallLines(before)]); process.exit(0);
+}
+for (const [key, value, say] of [['off', 'off', '下架了（作品清單還在）'], ['on', undefined, '放回放映廳的排隊裡'], ['pin', 'pinned', '固定在放映廳'], ['unpin', undefined, '取消固定，回到照新舊排']]) {
+  if (!arg[key]) continue;
+  const work = find(arg[key]), before = hallSelection(works, capacityNow()).shown;
+  if (value) work.hall = value; else delete work.hall;
+  save(); report([`${work.title}：${say}`, ...hallLines(before)]); process.exit(0);
+}
 if (arg.remove) {
-  const i = works.findIndex(w => w.id === arg.remove); if (i < 0) stop(`找不到代號「${arg.remove}」。現有：${works.map(w => w.id).join('、')}`);
+  const i = works.indexOf(find(arg.remove));
   const [gone] = works.splice(i, 1); save();
   report([`拿掉了：${gone.title}（${gone.label}）`, `封面與影片檔沒有刪，還在 ${gone.poster}${gone.src ? '、' + gone.src : ''}`]); process.exit(0);
 }
@@ -63,8 +98,8 @@ if (arg.series) {
   const series = works.find(w => w.id === arg.series && w.episodes); if (!series) stop(`找不到影集「${arg.series}」。現有影集：${works.filter(w => w.episodes).map(w => `${w.id}（${w.title}）`).join('、')}`);
   if (!id) stop('影集的分集要給 --youtube 連結');
   const episode = {title: arg.episode || arg.title || onlineTitle, youtubeId: id}; const d = iso(arg.duration); if (d) episode.duration = d;
-  series.episodes.push(episode); save();
-  report([`《${series.title}》加了一集：${episode.title}`, `現在共 ${series.episodes.length} 集。放映廳裡還是同一面銀幕，點進去的選集多一集。`]); process.exit(0);
+  const beforeS = hallSelection(works, capacityNow()).shown; series.episodes.push(episode); series.updated = today; save();
+  report([`《${series.title}》加了一集：${episode.title}`, `現在共 ${series.episodes.length} 集。放映廳裡還是同一面銀幕，點進去的選集多一集；這部算今天更新，排到最新。`, ...hallLines(beforeS)]); process.exit(0);
 }
 
 if (!arg.hall) stop(`要說放哪一廳：--廳 ${hallsFor(works).map(h => `「${h.name}」`).join(' ')}，或給一個新的廳名`);
@@ -77,7 +112,7 @@ let workId = arg.id ? slug(arg.id) : (slug(title) ? `${category}-${slug(title)}`
 if (!workId) stop('代號要用英文或數字：--代號 my-film');
 if (works.some(w => w.id === workId)) stop(`代號「${workId}」已經有了，請加 --代號 換一個`);
 
-const work = {id: workId, title, subtitle: arg.subtitle || [hall ? hall.name : arg.hall, arg.duration && seconds(arg.duration)].filter(Boolean).join('・'), category, label: hall ? hall.name : arg.hall, poster: `assets/${workId}.jpg`, description: arg.description || ''};
+const work = {id: workId, title, subtitle: arg.subtitle || [hall ? hall.name : arg.hall, arg.duration && seconds(arg.duration)].filter(Boolean).join('・'), category, label: hall ? hall.name : arg.hall, poster: `assets/${workId}.jpg`, description: arg.description || '', added: today};
 if (arg.duration) work.duration = seconds(arg.duration);
 if (!hall) { if (arg.hallLine) work.hallLine = arg.hallLine; if (arg.hallNote) work.hallNote = arg.hallNote; }
 if (arg.disclosure) work.disclosure = arg.disclosure;
@@ -110,12 +145,13 @@ if (!arg.dry) {
 // 放進清單：同一廳的最後面（預設）或最前面；新的廳排在所有廳後面
 const same = works.map((w, i) => w.category === category ? i : -1).filter(i => i >= 0);
 const where = !same.length ? works.length : arg.place === '前面' ? same[0] : same.at(-1) + 1;
-works.splice(where, 0, work); save();
+const beforeA = hallSelection(works, capacityNow()).shown; works.splice(where, 0, work); save();
 const order = works.filter(w => w.category === category).indexOf(work) + 1;
 report([
   `加好了：${work.title}`,
   hall ? `放在「${hall.name}」廳的第 ${order} 面銀幕（這一廳現在 ${hall.count + 1} 部）` : `開了一個新的廳「${arg.hall}」，排在最後一廳`,
   `全站現在 ${works.length} 部、${hallsFor(works).length} 個廳`,
+  ...hallLines(beforeA),
   work.description ? '' : '還沒有說明文字（--說明 "一句話"），作品清單那一格會是空的',
   `代號：${work.id}（要拿掉：node scripts/add-work.mjs --拿掉 ${work.id}）`
 ].filter(Boolean));

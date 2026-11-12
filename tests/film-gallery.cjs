@@ -3,6 +3,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const assert=require('node:assert/strict');
 const base=process.env.BASE_URL||'http://127.0.0.1:8767/';
 (async()=>{
+ const {hallSelection,hallsFor}=await import('../lib/catalog.mjs');let CAP=12;try{CAP=JSON.parse(require('node:fs').readFileSync(require('node:path').join(__dirname,'..','data','hall.json'),'utf8')).capacity;}catch{}const SHOWN_LIST=hallSelection(WORKS,CAP).shown,SHOWN=SHOWN_LIST.length,SHOWN_HALLS=hallsFor(SHOWN_LIST).length;
  const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
  for(const mode of ['normal','reduced','fallback']){
   const c=await b.newContext({viewport:{width:mode==='reduced'?390:1440,height:1000},reducedMotion:mode==='reduced'?'reduce':'no-preference'});
@@ -10,7 +11,7 @@ const base=process.env.BASE_URL||'http://127.0.0.1:8767/';
   const p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(base+'?view=classic');await p.locator('#film-gallery').scrollIntoViewIfNeeded();
   await p.waitForFunction(()=>document.querySelector('#film-gallery').dataset.renderer);
   const g=p.locator('#film-gallery');assert.equal(await g.getAttribute('data-renderer'),mode==='fallback'?'css':'webgl');
-  assert.equal(await p.locator('.film-index button').count(),N);
+  assert.equal(await p.locator('.film-index button').count(),SHOWN);
   if(mode==='normal'){
    await p.mouse.move(0,0);await p.waitForFunction(()=>document.querySelector('#film-gallery').dataset.current!=='longnight',{},{timeout:20000});
    await p.locator('.film-index button').first().click();

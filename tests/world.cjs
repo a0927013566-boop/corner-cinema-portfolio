@@ -4,13 +4,14 @@ const assert=require('node:assert/strict');
 const base=process.env.BASE_URL||'http://127.0.0.1:8767/';
 const gl=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist'];
 (async()=>{
+ const {hallSelection,hallsFor}=await import('../lib/catalog.mjs');let CAP=12;try{CAP=JSON.parse(require('node:fs').readFileSync(require('node:path').join(__dirname,'..','data','hall.json'),'utf8')).capacity;}catch{}const SHOWN_LIST=hallSelection(WORKS,CAP).shown,SHOWN=SHOWN_LIST.length,SHOWN_HALLS=hallsFor(SHOWN_LIST).length;
  const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:gl});
  for(const size of [{width:1440,height:900},{width:390,height:800}]){
   const p=await b.newPage({viewport:size}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(base);
   await p.waitForFunction(()=>document.documentElement.dataset.world==='on');
   const w=p.locator('#world');assert.equal(await w.getAttribute('data-renderer'),'webgl');
   assert.equal(await p.locator('#film-gallery').isHidden(),true);
-  assert.equal(await p.locator('[data-world=rail] button').count(),N+HALLS);
+  assert.equal(await p.locator('[data-world=rail] button').count(),SHOWN+SHOWN_HALLS);
   // 四個廳、十一部作品：點軌道走到每一站，片名與播放連結跟著換
   await p.locator('[data-world=rail] button').nth(1).click();await p.waitForFunction(()=>document.querySelector('#world').dataset.current==='changye');
   assert.equal(await p.locator('[data-world=title]').textContent(),'長夜同行');
@@ -26,7 +27,7 @@ const gl=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'
   await p.locator('.close-player').click();
   assert.equal(await p.locator('.work-card').count(),N);
   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
-  assert.deepEqual(errors,[]);console.log(`PASS world ${size.width}: webgl, ${N+HALLS} stops, rail, prev/next, keyboard, disclosure, play, close, catalogue kept`);await p.close();
+  assert.deepEqual(errors,[]);console.log(`PASS world ${size.width}: webgl, ${SHOWN+SHOWN_HALLS} stops, rail, prev/next, keyboard, disclosure, play, close, catalogue kept`);await p.close();
  }
  // 系統要求減少動態：空間照樣顯示，但畫面靜止（不飄、不緩動），捲動才換位置；可手動開啟動態
  const c=await b.newContext({reducedMotion:'reduce'});const r=await c.newPage();await r.goto(base);await r.waitForFunction(()=>document.documentElement.dataset.world==='on');

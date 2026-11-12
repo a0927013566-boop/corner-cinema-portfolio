@@ -7,7 +7,7 @@ initSoundExperience();
 import {initSceneMotion} from './lib/scene-motion.js?v=cinematic-1';
 import {initFilmGallery} from './lib/film-gallery.js?v=cinematic-1';
 import {initGalleryMotion} from './lib/gallery-motion.js?v=cinematic-1';
-import {initWorld} from './lib/world.js?v=world-2';
+import {initWorld} from './lib/world.js?v=world-3';
 initSceneMotion();
 initGalleryMotion();
 (() => {

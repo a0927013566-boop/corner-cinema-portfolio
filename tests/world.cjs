@@ -27,9 +27,13 @@ const gl=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'
   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   assert.deepEqual(errors,[]);console.log(`PASS world ${size.width}: webgl, 15 stops, rail, prev/next, keyboard, disclosure, play, close, catalogue kept`);await p.close();
  }
- // 沒有 WebGL、系統要求減少動態、?view=classic 都回到原本的放映廊
- const c=await b.newContext({reducedMotion:'reduce'});const r=await c.newPage();await r.goto(base);await r.locator('#film-gallery').scrollIntoViewIfNeeded();await r.waitForFunction(()=>document.querySelector('#film-gallery').dataset.renderer);
- assert.notEqual(await r.locator('html').getAttribute('data-world'),'on');assert.equal(await r.locator('#world').isHidden(),true);await c.close();
+ // 系統要求減少動態：空間照樣顯示，但畫面靜止（不飄、不緩動），捲動才換位置；可手動開啟動態
+ const c=await b.newContext({reducedMotion:'reduce'});const r=await c.newPage();await r.goto(base);await r.waitForFunction(()=>document.documentElement.dataset.world==='on');
+ await r.locator('#world').scrollIntoViewIfNeeded();await r.waitForFunction(()=>document.querySelector('#world').dataset.moving==='false');
+ await r.locator('[data-world=rail] button').nth(2).click();await r.waitForFunction(()=>document.querySelector('#world').dataset.current==='qiuguang');
+ await r.locator('#world [data-motion-toggle]').click();await r.waitForFunction(()=>document.querySelector('#world').dataset.moving==='true');await c.close();
+ // 沒有 WebGL 或 ?view=classic 回到原本的放映廊
+ const n=await b.newContext();await n.addInitScript(()=>{const get=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...a){return /webgl/.test(type)?null:get.call(this,type,...a)}});const f=await n.newPage();await f.goto(base);await f.locator('#film-gallery').scrollIntoViewIfNeeded();await f.waitForFunction(()=>document.querySelector('#film-gallery').dataset.renderer);assert.equal(await f.locator('#world').isHidden(),true);await n.close();
  const q=await b.newPage();await q.goto(base+'?view=classic');await q.locator('#film-gallery').scrollIntoViewIfNeeded();await q.waitForFunction(()=>document.querySelector('#film-gallery').dataset.renderer);assert.equal(await q.locator('#world').isHidden(),true);
- console.log('PASS world fallback: reduced motion and ?view=classic keep the original gallery');await b.close();
+ console.log('PASS world: reduced motion shows a still world with opt-in; no WebGL and ?view=classic keep the original gallery');await b.close();
 })().catch(e=>{console.error(e);process.exit(1)});

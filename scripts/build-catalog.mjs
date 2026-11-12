@@ -1,4 +1,4 @@
-import {workMarkup, trackMarkup, playbackURL} from '../lib/catalog.mjs';
+import {workMarkup, trackMarkup, playbackURL, hallsFor} from '../lib/catalog.mjs';
 import fs from 'node:fs';
 const works=JSON.parse(fs.readFileSync(new URL('../data/works.json',import.meta.url)));
 const tracks=JSON.parse(fs.readFileSync(new URL('../data/music.json',import.meta.url)));
@@ -10,7 +10,8 @@ fs.writeFileSync(new URL('../catalog.html',import.meta.url),`<!doctype html><htm
 console.log(`${works.length} work groups, ${tracks.length} audio tracks`);
 
 const indexURL = new URL('../index.html',import.meta.url);
+const filters = `<button type="button" data-filter="all" aria-pressed="true">全部作品</button>` + hallsFor(works).map(h => `<button type="button" data-filter="${esc(h.id)}" aria-pressed="false">${esc(h.name)}</button>`).join('');
 const index = fs.readFileSync(indexURL, 'utf8')
   .replace(/<!-- WORKS:START -->[\s\S]*?<!-- WORKS:END -->/, `<!-- WORKS:START -->${workMarkup(works)}<!-- WORKS:END -->`)
   .replace(/<!-- TRACKS:START -->[\s\S]*?<!-- TRACKS:END -->/, `<!-- TRACKS:START -->${trackMarkup(tracks.filter(t => t.group === 'song'))}<!-- TRACKS:END -->`);
-fs.writeFileSync(indexURL, index);
+fs.writeFileSync(indexURL, index.replace(/(<div class="filters" id="work-filters"[^>]*>)[\s\S]*?(<\/div>)/, `$1${filters}$2`));

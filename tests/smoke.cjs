@@ -1,3 +1,4 @@
+const WORKS=JSON.parse(require('node:fs').readFileSync(require('node:path').join(__dirname,'..','data','works.json'),'utf8'));const N=WORKS.length,HALLS=new Set(WORKS.map(w=>w.category)).size,YT=WORKS.reduce((n,w)=>n+(w.episodes?w.episodes.length:(!w.src&&w.youtubeId?1:0)),0);
 // Start a local HTTP server first; no third-party streaming assertions here.
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -12,7 +13,7 @@ const tracks=JSON.parse(fs.readFileSync('data/music.json'));
  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
  const mediaRequests=[];page.on('request',r=>{if(/\.(mp4|mp3)(\?|$)|youtube/.test(r.url()))mediaRequests.push(r.url());});
  await page.goto(base);await page.waitForSelector('#work-filters:visible');
- assert.equal(await page.locator('.work-card').count(),11);
+ assert.equal(await page.locator('.work-card').count(),N);
  assert.equal(mediaRequests.length,0,'no media or YouTube on initial load');
  for(const width of [1920,1440,768,390,320]){await page.setViewportSize({width,height:900});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width,`overflow at ${width}`);}
  await page.setViewportSize({width:1440,height:1000});
@@ -79,8 +80,8 @@ const tracks=JSON.parse(fs.readFileSync('data/music.json'));
  await page.locator('.hero [data-play]').click();for(let i=0;i<14;i++){await page.keyboard.press('Tab');assert(await page.evaluate(()=>document.querySelector('dialog').contains(document.activeElement)));}await closeFilm();
  console.log('PASS queue snapshot / natural end / mutual exclusion / Back / share fallback / keyboard');
  await context.close();
- const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base);assert.equal(await p.locator('.work-card').count(),11);assert.equal(await p.locator('.track').count(),7);assert(await p.locator('[data-copy-site]').isHidden());await p.goto(base+'catalog.html');assert.equal(await p.locator('a[href$=".mp3"]').count(),41);assert.equal(await p.locator('a[href*="watch?v="]').count(),23);await nojs.close();
- const failed=await browser.newContext();await failed.route('**/data/*.json',r=>r.fulfill({status:503,body:'unavailable'}));const fp=await failed.newPage();await fp.goto(base);await fp.waitForFunction(()=>document.querySelector('#works-status').textContent.includes('未載入'));assert.equal(await fp.locator('.work-card').count(),11);assert.equal(await fp.locator('.track').count(),7);assert(await fp.locator('#work-filters').isHidden());await failed.close();
+ const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base);assert.equal(await p.locator('.work-card').count(),N);assert.equal(await p.locator('.track').count(),7);assert(await p.locator('[data-copy-site]').isHidden());await p.goto(base+'catalog.html');assert.equal(await p.locator('a[href$=".mp3"]').count(),41);assert.equal(await p.locator('a[href*="watch?v="]').count(),YT);await nojs.close();
+ const failed=await browser.newContext();await failed.route('**/data/*.json',r=>r.fulfill({status:503,body:'unavailable'}));const fp=await failed.newPage();await fp.goto(base);await fp.waitForFunction(()=>document.querySelector('#works-status').textContent.includes('未載入'));assert.equal(await fp.locator('.work-card').count(),N);assert.equal(await fp.locator('.track').count(),7);assert(await fp.locator('#work-filters').isHidden());await failed.close();
  const broken=await browser.newContext();await broken.route(/\.(mp3|mp4)$/,r=>r.fulfill({status:404,body:'not found'}));const bp=await broken.newPage();await bp.goto(base);await bp.waitForSelector('#work-filters:visible');await bp.locator('.hero [data-play]').click();await bp.waitForFunction(()=>document.querySelector('#player-status').textContent.includes('載入失敗'));assert((await bp.locator('#player-fallback').getAttribute('href')).endsWith('.mp4'));await bp.keyboard.press('Escape');await bp.waitForFunction(()=>!location.hash.startsWith('#watch='));await bp.locator('.track').first().click();await bp.waitForFunction(()=>document.querySelector('#listening-status').textContent.includes('未能載入'));assert((await bp.locator('#listening-source').getAttribute('href')).endsWith('.mp3'));await broken.close();
  const reduced=await browser.newContext({reducedMotion:'reduce'});const rp=await reduced.newPage();await rp.goto(base);assert.equal(await rp.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior),'auto');await reduced.close();
  assert.deepEqual(errors,[]);await browser.close();console.log('PASS responsive, all native playback, static fallback, 503 / 404, reduced motion; YouTube streams NOT tested');

@@ -61,3 +61,9 @@ GitHub Pages 設定為 `main` 根目錄。訪客沒有編輯入口；任何 AI �
 實作 main `a80eaa0` 的 Pages run `42313223138` 已成功，21檔雜湊一致；正式站影片播放／120秒定位、音樂播放／換分類保持佇列／片尾接下一首已實測。詳細讀 `docs/validation.md` 與 `docs/deployment-check.json`。YouTube兩影集有正確播放器片名及片長，但本雲端Googlevideo回403，串流未驗證；保留原片備援，不宣稱全19集成功或所有訪客失敗。
 
 創作筆記和影格由 `data/works.json` 的可選 `notes` 欄位提供，靜態建置及瀏覽器共用 `lib/catalog.mjs`；改資料後重建首頁。`assets/stills/` 僅為已公開MV的六張取幀，取幀時間／雜湊見新增證據manifest。
+
+## 2026-11-12 空間化第一輪（分支 claude/projection-room，未合併）
+
+依本人 10:14 裁定（見 AGENTS.md 最上面那段）。作品區在 `#world`：捲動等於往前走，銀幕左右交錯，每部片的主色照亮放映機光束、灰塵與地面倒影；滑鼠移動有視差，點銀幕走過去、再點播放。資料仍讀 `data/works.json`，新增類別 `code`（程式動畫四部，皆 YouTube，虛構品牌保留說明文字）。`lib/catalog.mjs` 加第四組，`scripts/build-catalog.mjs` 讓只有 YouTube 的單支作品也有連結；首頁與 catalog.html 已重建（11 組作品、41 首）。
+
+已跑：world、film-gallery（用 `?view=classic`）、smoke、spatial、motion-choice 五支，本機 Chromium 軟體繪圖 1440 與 390 寬。沒做：實體手機、真顯示卡上的流暢度、YouTube 串流、本人看過。下一輪：首頁夜景到走道的入場、廳入口畫面、音樂區併進同一個空間、程式動畫在網頁上現場跑（要有四支樣片的原始頁面）。

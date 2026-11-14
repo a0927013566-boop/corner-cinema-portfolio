@@ -1,0 +1,37 @@
+# 每天自動去看 YouTube 頻道，有新片就加進網站並上線。
+# 規則在 scripts/sync-channel.mjs 開頭；放映廳誰留誰走在 lib/catalog.mjs 的 hallSelection。
+# 要暫停：到 GitHub 的 Actions 頁把這一項停用。要馬上跑一次：同一頁按 Run workflow。
+name: 頻道新片自動上網站
+on:
+  schedule:
+    - cron: '23 4,13 * * *'   # 台灣時間每天 12:23 和 21:23
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: sync-channel
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 看頻道、加新片
+        run: node scripts/sync-channel.mjs
+      - name: 規則檢查
+        run: node tests/hall-rule.mjs
+      - name: 有改才存檔上線
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then echo "沒有新片"; exit 0; fi
+          git config user.name "corner-cinema-sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "頻道新片自動加進網站"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

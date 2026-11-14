@@ -1,12 +1,13 @@
 import {initSiteFlow} from './lib/site-flow.js?v=cinematic-1';
 initSiteFlow();
-import {external, workMarkup, trackMarkup, episodeDuration} from './lib/catalog.mjs';
+import {external, workMarkup, trackMarkup, episodeDuration, hallSelection} from './lib/catalog.mjs';
 import {createListeningPlayer} from './lib/listening.js';
 import {initSoundExperience, setSoundTrack} from './lib/sound-experience.js?v=cinematic-1';
 initSoundExperience();
 import {initSceneMotion} from './lib/scene-motion.js?v=cinematic-1';
 import {initFilmGallery} from './lib/film-gallery.js?v=cinematic-1';
 import {initGalleryMotion} from './lib/gallery-motion.js?v=cinematic-1';
+import {initWorld} from './lib/world.js?v=world-6';
 initSceneMotion();
 initGalleryMotion();
 (() => {
@@ -64,15 +65,27 @@ initGalleryMotion();
     if (active.episodes) query.set('episode', String(episode + 1));
     history[push ? 'pushState' : 'replaceState'](push ? {cornerPlayer:true} : history.state, '', `#${query}`);
   }
+  // 選集按鈕上的字：標題寫了「第 3 集（中）」就照寫，沒寫就照順序編號
+  function episodeLabel(part, index) {
+    const m = String(part.title || '').match(/第\s*(\d+)\s*集(?:\s*[（(]\s*([上中下])\s*[）)])?/);
+    return m ? `第 ${m[1]} 集${m[2] ? '・' + m[2] : ''}` : `第 ${index + 1} 集`;
+  }
+  // 記得每部影集看到第幾集，下次點開接著看（只存在這台裝置的瀏覽器裡）
+  const watched = {
+    read(id) { try { const n = JSON.parse(localStorage.getItem('cc-watched') || '{}')[id]; return Number.isInteger(n) ? n : null; } catch { return null; } },
+    write(id, index) { try { const all = JSON.parse(localStorage.getItem('cc-watched') || '{}'); all[id] = index; localStorage.setItem('cc-watched', JSON.stringify(all)); } catch {} }
+  };
+  let hallOnly = false; // 從放映廳開的：多集作品只放第一支影片，選集留在作品位置
   function playCurrent(autoplay) {
     stopMedia();
     const mine = generation;
     const item = active;
     const part = item.episodes?.[episode];
+    if (item.episodes && !hallOnly) watched.write(item.id, episode);
     const videoId = part?.youtubeId || (!item.src && item.youtubeId);
     $('#player-title').textContent = part ? part.title : item.title;
     $('#player-label').textContent = `${item.label} · ${part ? episodeDuration(part.duration) : item.duration || ''}`;
-    $('#player-description').textContent = item.description;
+    $('#player-description').textContent = item.description + (hallOnly && item.episodes?.length > 1 ? `　放映廳放第一支影片；全部 ${item.episodes.length} 支在下面「看作品」可以選集。` : '');
     $('.work-share').hidden = true;
     $('#player-disclosure').hidden = !item.disclosure;
     $('#player-disclosure').textContent = item.disclosure || '';
@@ -82,9 +95,10 @@ initGalleryMotion();
     fallback.href = videoId ? external(videoId) : item.src;
     fallback.textContent = videoId ? '在 YouTube 開啟 ↗' : '另開影片 ↗';
     fallback.setAttribute('aria-label', `${fallback.textContent.replace(' ↗','')}（另開新分頁）`);
-    const picker = $('#episode-picker'); picker.hidden = !item.episodes;
-    picker.innerHTML = item.episodes ? item.episodes.map((p,i) => `<button type="button" data-episode="${i}" aria-pressed="${episode === i}">${item.id === 'changye' ? (i ? '第 1 集・下' : '第 1 集・上') : `第 ${i + 1} 集`}<span>${episodeDuration(p.duration)}</span></button>`).join('') : '';
-    $('#next-episode').hidden = !item.episodes || episode === item.episodes.length - 1;
+    const picker = $('#episode-picker'); picker.hidden = !item.episodes || hallOnly;
+    picker.innerHTML = item.episodes ? item.episodes.map((p,i) => `<button type="button" data-episode="${i}" aria-pressed="${episode === i}">${episodeLabel(p,i)}<span>${episodeDuration(p.duration)}</span></button>`).join('') : '';
+    $('#next-episode').hidden = !item.episodes || hallOnly || episode === item.episodes.length - 1;
+    picker.querySelector('[aria-pressed=true]')?.scrollIntoView({block:'nearest'});
     if (videoId) {
       const iframe = document.createElement('iframe');
       iframe.title = `${part?.title || item.title} — YouTube 播放器`;
@@ -99,6 +113,8 @@ initGalleryMotion();
         if (mine !== generation || !dialog.open) return;
         player = new YT.Player(iframe, { events: {
           onReady: () => { if(mine !== generation) return; clearTimeout(timer); $('#player-status').textContent = ''; },
+          // 這一集播完，自己接下一集
+          onStateChange: (event) => { if (mine !== generation || event.data !== 0 || hallOnly || !active?.episodes || episode >= active.episodes.length - 1) return; episode++; playCurrent(true); setLocation(); },
           onError: () => { if(mine !== generation) return; clearTimeout(timer); $('#player-status').textContent = 'YouTube 暫時無法在此播放這一集。請點「在 YouTube 開啟」觀看原影片。'; }
         }});
       }).catch(() => { if (mine === generation) $('#player-status').textContent = '影片由 YouTube 播放；如果無法載入，可另開原影片。'; });
@@ -115,7 +131,7 @@ initGalleryMotion();
       if (autoplay) media.play().catch(() => { if(mine === generation && !media.error) $('#player-status').textContent = '按播放器的播放鍵開始。'; });
     }
   }
-  function openPlayer(id, requestedEpisode = 0, autoplay = true, updateURL = true) {
+  function openPlayer(id, requestedEpisode = null, autoplay = true, updateURL = true) {
     const track = tracks.find(t => t.id === id);
     if (track) { listening.start(track, autoplay ? visibleTracks() : tracks, autoplay); return true; }
     const item = works.find(w => w.id === id);
@@ -128,7 +144,7 @@ initGalleryMotion();
       dialog.showModal(); document.body.classList.add('modal-open');
       $('.close-player').focus();
     }
-    active = item; episode = Math.max(0,Math.min(Number.isFinite(requestedEpisode) ? requestedEpisode : 0, (item.episodes?.length || 1) - 1));
+    active = item; episode = Math.max(0,Math.min(Number.isFinite(requestedEpisode) && requestedEpisode !== null ? requestedEpisode : (item.episodes ? watched.read(item.id) ?? 0 : 0), (item.episodes?.length || 1) - 1));
     playCurrent(autoplay);
     if (updateURL) setLocation(opening);
     return true;
@@ -147,13 +163,13 @@ initGalleryMotion();
       const p = new URLSearchParams(location.hash.slice(1));
       const id = p.get('watch'), index = parseInt(p.get('episode') || '1',10) - 1;
       if (listening.current()?.id === id) return;
-      if (!active || active.id !== id || episode !== index) openPlayer(id,index,false,false);
+      if (!active || active.id !== id || episode !== index) { hallOnly = false; openPlayer(id,index,false,false); }
     } else closePlayer(false);
   }
   document.addEventListener('click', (e) => {
     const link = e.target.closest('[data-play]');
     if (!link || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button > 0) return;
-    if (openPlayer(link.dataset.play)) e.preventDefault();
+    hallOnly = !!link.closest('#world'); if (openPlayer(link.dataset.play, hallOnly ? 0 : null)) e.preventDefault();
   });
   $('#work-filters').addEventListener('click', (e) => {
     const button = e.target.closest('[data-filter]'); if (!button) return;
@@ -209,7 +225,7 @@ initGalleryMotion();
   });
   async function getJSON(url) { const r = await fetch(url); if(!r.ok) throw new Error('Could not load content'); const data = await r.json(); if (!Array.isArray(data)) throw new Error('Invalid content list'); return data; }
   Promise.allSettled([getJSON('data/works.json'),getJSON('data/music.json')]).then(([films,music]) => {
-    if (films.status === 'fulfilled') { works = films.value; renderWorks(); initFilmGallery(works); $('#work-filters').hidden = false; }
+    if (films.status === 'fulfilled') { works = films.value; renderWorks(); const screening = hallSelection(works, document.querySelector('#world')?.dataset.capacity).shown; initWorld(screening).catch(()=>false).then(on=>{ if(!on) initFilmGallery(screening); }); document.addEventListener('corner:world-lost',()=>initFilmGallery(hallSelection(works, document.querySelector('#world')?.dataset.capacity).shown),{once:true}); $('#work-filters').hidden = false; }
     else $('#works-status').textContent = '互動清單未載入，仍可點作品直接觀看。';
     if (music.status === 'fulfilled') { tracks = music.value; renderTracks(); $('#music-filters').hidden = false; $('.search-label').hidden = false; $('#play-queue').hidden = false; }
     else $('#music-status').textContent = '互動清單未載入，仍可直接開啟音樂。';

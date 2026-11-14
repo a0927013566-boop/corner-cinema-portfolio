@@ -1,0 +1,45 @@
+{
+  "channelId": "UCMdfKN9cd0BWFd4sgC4y_Kg",
+  "halls": [
+    {
+      "has": [
+        "程式動畫"
+      ],
+      "hall": "code"
+    },
+    {
+      "has": [
+        "照片"
+      ],
+      "hall": "photo"
+    },
+    {
+      "has": [
+        "MV"
+      ],
+      "hall": "mv"
+    },
+    {
+      "has": [
+        "短劇"
+      ],
+      "hall": "series"
+    }
+  ],
+  "fallback": {
+    "id": "other",
+    "name": "其他作品"
+  },
+  "seen": [
+    "gKsAzB-G3Ko",
+    "vKwtCGbQ9bc",
+    "-DhrAnIYUfw",
+    "6zTdjAduL80",
+    "Su5_riEa0H0",
+    "35J5zfOpiBI",
+    "0kC02zJ0mD0",
+    "AspOozR33Qg",
+    "LjtokriiHgs"
+  ],
+  "skip": []
+}
